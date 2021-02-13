@@ -1,0 +1,9 @@
+- Work SEO
+- Work layout
+- Thought SEO
+- Thought layout
+- Animation
+- First thought
+- Work content
+- Fix link cursor
+- 404
