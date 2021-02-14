@@ -1,4 +1,3 @@
-- mobile nav
 - 404
 - First thought
 - Work content

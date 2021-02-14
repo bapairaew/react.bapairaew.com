@@ -1,46 +1,33 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Box, MenuButton, NavLink as A } from "theme-ui";
+import { Box, NavLink as A } from "theme-ui";
 
-export default function Nav() {
+export default function Nav(props) {
   const router = useRouter();
   const getLinkStyle = (path, exact = false) =>
     (exact ? router.pathname === path : router.pathname.startsWith(path))
       ? undefined
       : { color: "gray" };
   return (
-    <>
-      <Box
-        sx={{
-          display: ["flex", "none", "none"],
-        }}
-      >
-        <MenuButton aria-label="toggle navigation" />
-      </Box>
-      <Box
-        sx={{
-          display: ["none", "flex", "flex"],
-        }}
-      >
-        <Link href="/thoughts">
-          <A mr={3} sx={getLinkStyle("/thoughts")}>
-            thoughts
-          </A>
-        </Link>
-        <Link href="/photos">
-          <A mr={3} sx={getLinkStyle("/photos")}>
-            photos
-          </A>
-        </Link>
-        <Link href="/works">
-          <A mr={3} sx={getLinkStyle("/works")}>
-            works
-          </A>
-        </Link>
-        <Link href="/">
-          <A sx={getLinkStyle("/", true)}>about</A>
-        </Link>
-      </Box>
-    </>
+    <Box {...props}>
+      <Link href="/thoughts">
+        <A mr={3} sx={getLinkStyle("/thoughts")}>
+          Thoughts
+        </A>
+      </Link>
+      <Link href="/photos">
+        <A mr={3} sx={getLinkStyle("/photos")}>
+          Photos
+        </A>
+      </Link>
+      <Link href="/works">
+        <A mr={3} sx={getLinkStyle("/works")}>
+          Works
+        </A>
+      </Link>
+      <Link href="/">
+        <A sx={getLinkStyle("/", true)}>About</A>
+      </Link>
+    </Box>
   );
 }

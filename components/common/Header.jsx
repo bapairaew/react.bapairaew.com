@@ -5,15 +5,15 @@ import Nav from "~/components/common/Nav";
 export default function Header() {
   return (
     <Container py={[3, 3, 4]}>
-      <Flex>
-        <Box sx={{ flex: "1 1 auto" }}>
+      <Flex sx={{ flexWrap: "wrap" }}>
+        <Box mb={3} sx={{ flex: "1 1 auto" }}>
           <Link href="/">
             <A>
               <Heading>Narudom.</Heading>
             </A>
           </Link>
         </Box>
-        <Nav />
+        <Nav mb={3} />
       </Flex>
     </Container>
   );
