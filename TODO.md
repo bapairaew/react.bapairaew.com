@@ -1,4 +1,3 @@
-- Fix link cursor
 - mobile nav
 - 404
 - First thought
