@@ -21,6 +21,24 @@ export default function AboutHero() {
       <Text mt={3} color="gray" sx={{ fontSize: [3, 4, 4] }}>
         Software Engineer
       </Text>
+      <Flex my={3}>
+        <Link
+          sx={{ color: "gray" }}
+          href="https://www.linkedin.com/in/ntechaval/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn ↗
+        </Link>
+        <Text mx={2}> · </Text>
+        <Link sx={{ color: "gray" }} href="mailto:iam@bapairaew.com">
+          Email ↗
+        </Link>
+        <Text mx={2}> · </Text>
+        <Link sx={{ color: "gray" }} href="/cv.pdf" target="_blank">
+          CV ↗
+        </Link>
+      </Flex>
       <Box mt={6} px={3} variant="layout.text">
         <Text my={3}>
           I am a software engineer who enjoy involving in the whole product
