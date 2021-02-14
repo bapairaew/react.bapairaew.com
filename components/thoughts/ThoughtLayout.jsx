@@ -1,5 +1,6 @@
 import { NextSeo } from "next-seo";
-import { Container, Heading, Text } from "theme-ui";
+import Link from "next/link";
+import { Container, Heading, Text, NavLink as A } from "theme-ui";
 import Footer from "~/components/common/Footer";
 import Header from "~/components/common/Header";
 import { parseThought } from "~/libs/parser";
@@ -11,8 +12,23 @@ export default function ThoughtLayout({ children, frontMatter }) {
   return (
     <>
       <Header />
-      <NextSeo {...frontMatter} />
+      <NextSeo
+        {...frontMatter}
+        title={`${frontMatter.title} | Narudom`}
+        description={frontMatter.description}
+        openGraph={{
+          title: `${frontMatter.title} | Narudom`,
+          description: frontMatter.description,
+          images: frontMatter.images || [],
+          site_name: "Narudom",
+        }}
+      />
       <Container variant="layout.text">
+        <Link href="/thoughts">
+          <A sx={{ mb: 4, color: "gray" }}>
+            <Text>← Back</Text>
+          </A>
+        </Link>
         <Heading as="h1" sx={{ fontWeight: "display" }}>
           {thought.title}
         </Heading>

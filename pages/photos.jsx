@@ -3,6 +3,7 @@ import Footer from "~/components/common/Footer";
 import Header from "~/components/common/Header";
 import PhotoCard from "~/components/photos/PhotoCard";
 import { getAllPhotos } from "~/libs/data";
+import { NextSeo } from "next-seo";
 
 export const getStaticProps = async () => {
   const photos = await getAllPhotos();
@@ -14,6 +15,16 @@ export const getStaticProps = async () => {
 export default function Seen({ photos }) {
   return (
     <>
+      <NextSeo
+        title="Photos | Narudom"
+        description="Some photos (badly) taken by a software engineer."
+        openGraph={{
+          title: "Photos | Narudom",
+          description: "Some photos (badly) taken by a software engineer.",
+          images: [],
+          site_name: "Narudom",
+        }}
+      />
       <Header />
       <Container>
         <Heading as="h1" sx={{ fontWeight: "display" }} mb={3}>

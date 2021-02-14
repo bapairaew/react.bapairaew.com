@@ -1,5 +1,6 @@
 import { NextSeo } from "next-seo";
-import { Container, Heading, Text } from "theme-ui";
+import Link from "next/link";
+import { Container, Heading, Text, NavLink as A } from "theme-ui";
 import Footer from "~/components/common/Footer";
 import Header from "~/components/common/Header";
 import { parseWork } from "~/libs/parser";
@@ -26,8 +27,23 @@ export default function WorkLayout({ children, frontMatter }) {
   return (
     <>
       <Header />
-      <NextSeo {...frontMatter} />
+      <NextSeo
+        {...frontMatter}
+        title={`${frontMatter.title} | Narudom`}
+        description={frontMatter.description}
+        openGraph={{
+          title: `${frontMatter.title} | Narudom`,
+          description: frontMatter.description,
+          images: frontMatter.images || [],
+          site_name: "Narudom",
+        }}
+      />
       <Container variant="layout.text">
+        <Link href="/works">
+          <A sx={{ mb: 4, color: "gray" }}>
+            <Text>← Back</Text>
+          </A>
+        </Link>
         <Text my={2} variant="subtitle">
           {[work.year, tagsMap.Company?.[0]].filter((x) => x).join(" · ")}
         </Text>

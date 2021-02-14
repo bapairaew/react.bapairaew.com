@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Box, MenuButton, Link as A } from "theme-ui";
+import { Box, MenuButton, NavLink as A } from "theme-ui";
 
 export default function Nav() {
   const router = useRouter();

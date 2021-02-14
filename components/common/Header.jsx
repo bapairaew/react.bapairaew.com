@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Box, Container, Flex, Heading, Link as A } from "theme-ui";
+import { Box, Container, Flex, Heading, NavLink as A } from "theme-ui";
 import Nav from "~/components/common/Nav";
 
 export default function Header() {

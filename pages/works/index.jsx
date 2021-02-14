@@ -3,6 +3,7 @@ import Footer from "~/components/common/Footer";
 import { getAllWorks } from "~/libs/data";
 import { Box, Container, Grid, Heading } from "theme-ui";
 import WorkCard from "~/components/works/WorkCard";
+import { NextSeo } from "next-seo";
 
 export const getStaticProps = async () => {
   const works = await getAllWorks();
@@ -14,6 +15,16 @@ export const getStaticProps = async () => {
 export default function Works({ works }) {
   return (
     <>
+      <NextSeo
+        title="Works | Narudom"
+        description="(Almost) all Narudom's software engineering projects."
+        openGraph={{
+          title: "Works | Narudom",
+          description: "(Almost) all Narudom's software engineering projects.",
+          images: [],
+          site_name: "Narudom",
+        }}
+      />
       <Header />
       <Container>
         <Heading as="h1" sx={{ fontWeight: "display" }}>

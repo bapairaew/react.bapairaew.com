@@ -1,5 +1,3 @@
-- Work SEO
-- Thought SEO
 - Fix link cursor
 - mobile nav
 - 404
