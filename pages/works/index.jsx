@@ -15,7 +15,7 @@ export default function Works({ works }) {
   return (
     <>
       <Header />
-      <Container variant="layout.text">
+      <Container>
         <Heading as="h1" sx={{ fontWeight: "display" }}>
           Works
         </Heading>

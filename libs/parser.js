@@ -31,11 +31,15 @@ export const parseWork = (work) => {
 
   const types = ["Mobile app", "Desktop app", "Web app"];
 
-  const platforms = ["Android", "Symbian OS", "Windows Phone"];
+  const platforms = ["iOS", "Android", "Symbian OS", "Windows Phone"];
 
   const database = ["MongoDB", "MySQL", "MSSQL"];
 
   const companies = [
+    "Chulalongkorn University",
+    "Microsoft",
+    "Nokia",
+    "SAMART",
     "M-Active",
     "ZyLab",
     "AnnTac",
@@ -44,6 +48,8 @@ export const parseWork = (work) => {
     "LSE",
     "Imperial College",
     "PwC",
+    "Oddle",
+    "Argile",
   ];
 
   const others = [
@@ -99,8 +105,14 @@ export const parseThought = (thought) => {
 };
 
 export const parsePhoto = (photo) => {
+  const parts = photo.data.ImageDescription.split(", ");
   return {
     slug: photo.path.split("/").pop().replace(".jpeg", ""),
-    ...photo,
+    place: [parts[0], parts.pop()].join(", "),
+    date:
+      photo.data.DateTimeOriginal?.toJSON() ||
+      photo.data.CreateDate?.toJSON() ||
+      null,
+    camera: photo.data.Model ? [photo.data.Model] : null,
   };
 };

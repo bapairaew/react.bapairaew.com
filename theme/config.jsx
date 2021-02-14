@@ -4,6 +4,7 @@ import * as merge from "deepmerge";
 const textContainerStyle = {
   maxWidth: 680,
   mx: "auto",
+  px: 3,
 };
 
 const theme = merge(system, {
@@ -25,6 +26,7 @@ const theme = merge(system, {
       p: 3,
     },
     text: {
+      p: 3,
       maxWidth: 680,
       mx: "auto",
     },
@@ -59,8 +61,8 @@ const theme = merge(system, {
     h4: textContainerStyle,
     h5: textContainerStyle,
     h6: textContainerStyle,
-    ul: textContainerStyle,
-    ol: textContainerStyle,
+    ul: { ...textContainerStyle, pl: 5 },
+    ol: { ...textContainerStyle, pl: 5 },
     p: textContainerStyle,
     // TODO: fix import prism from "@theme-ui/prism/presets/theme-ui"; throw SyntaxError: Unexpected token 'export'
     code: {

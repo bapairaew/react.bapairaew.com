@@ -7,7 +7,7 @@ export default function Nav() {
   const getLinkStyle = (path, exact = false) =>
     (exact ? router.pathname === path : router.pathname.startsWith(path))
       ? undefined
-      : { color: "gray", textDecoration: "underline" };
+      : { color: "gray" };
   return (
     <>
       <Box

@@ -11,12 +11,12 @@ export const getStaticProps = async () => {
   };
 };
 
-export default function Thoughts({ photos }) {
+export default function Seen({ photos }) {
   return (
     <>
       <Header />
-      <Container variant="layout.text">
-        <Heading as="h1" sx={{ fontWeight: "display" }}>
+      <Container>
+        <Heading as="h1" sx={{ fontWeight: "display" }} mb={3}>
           Photos
         </Heading>
       </Container>

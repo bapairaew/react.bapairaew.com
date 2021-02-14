@@ -1,4 +1,5 @@
-import { AspectRatio, Flex, Image, Text } from "theme-ui";
+import { AspectRatio, Flex, Text, Box } from "theme-ui";
+import Image from "next/image";
 
 export default function PhotoCard({ photo }) {
   return (
@@ -12,28 +13,22 @@ export default function PhotoCard({ photo }) {
         }}
       >
         <Image
-          sx={{
-            objectFit: "cover",
-          }}
+          layout="fill"
+          objectFit="cover"
           src={`/photos/${photo.slug}.jpeg`}
-          alt={photo.description}
+          alt={photo.place}
         />
       </AspectRatio>
-      <Text variant="subtitle" color="gray" sx={{ textAlign: "center" }}>
-        {photo.description}
-      </Text>
-      <Text
-        mt={1}
-        variant="subtitle"
-        sx={{
-          textAlign: "center",
-          overflow: "hidden",
-          textOverflow: "ellipsis",
-          whiteSpace: "nowrap",
-        }}
-      >
-        {photo.date ? new Date(photo.date).toLocaleDateString() : ""}
-      </Text>
+      <Box my={1}>
+        <Text variant="subtitle" sx={{ textAlign: "center" }}>
+          {[photo.place, photo.camera && `on ${photo.camera}`, ,]
+            .filter((x) => x)
+            .join(" ")}
+        </Text>
+        <Text variant="subtitle" sx={{ textAlign: "center" }}>
+          {photo.date && new Date(photo.date).toLocaleDateString()}
+        </Text>
+      </Box>
     </Flex>
   );
 }

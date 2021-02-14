@@ -23,16 +23,7 @@ export const getImageData = async (pattern) => {
     (await globby(pattern)).map((path) =>
       promisify(fs.readFile)(path)
         .then(exifr.parse)
-        .then((data) => ({
-          description: data.ImageDescription,
-          date:
-            data.DateTimeOriginal?.toJSON() ||
-            data.CreateDate?.toJSON() ||
-            null,
-          camera:
-            data.Make && data.Model ? [data.Make, data.Model].join(" ") : null,
-          path,
-        }))
+        .then((data) => ({ data, path }))
     )
   );
 

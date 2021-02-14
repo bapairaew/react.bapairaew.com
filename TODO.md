@@ -1,9 +1,8 @@
 - Work SEO
-- Work layout
 - Thought SEO
-- Thought layout
-- Animation
+- Fix link cursor
+- mobile nav
+- 404
 - First thought
 - Work content
-- Fix link cursor
-- 404
+- Animation
