@@ -1,4 +1,3 @@
-- 404
 - First thought
 - Work content
 - Animation

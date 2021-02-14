@@ -50,6 +50,14 @@ const theme = merge(system, {
       borderColor: "muted",
     },
   },
+  buttons: {
+    primary: {
+      cursor: "pointer",
+    },
+    secondary: {
+      cursor: "pointer",
+    },
+  },
   styles: {
     a: {
       color: "text",

@@ -1,4 +1,4 @@
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 import AboutFeatured from "~/components/about/AboutFeatured";
 import AboutHeader from "~/components/about/AboutHeader";
 import AboutHero from "~/components/about/AboutHero";
@@ -17,10 +17,16 @@ export const getStaticProps = async () => {
 export default function Home({ works, thoughts, photos }) {
   return (
     <>
-      <Head>
-        <title>Narudom</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <NextSeo
+        title="Narudom"
+        description="A software engineer portfolio."
+        openGraph={{
+          title: "Narudom",
+          description: "A software engineer portfolio.",
+          images: [],
+          site_name: "Narudom",
+        }}
+      />
       <AboutHeader />
       <AboutHero />
       <AboutFeatured works={works} thoughts={thoughts} photos={photos} />
