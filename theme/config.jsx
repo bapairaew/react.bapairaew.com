@@ -32,7 +32,6 @@ const theme = merge(system, {
     },
   },
   links: {
-    cursor: "pointer",
     nav: {
       fontWeight: "body",
       cursor: "pointer",
@@ -54,6 +53,7 @@ const theme = merge(system, {
   styles: {
     a: {
       color: "text",
+      cursor: "pointer",
     },
     h1: textContainerStyle,
     h2: textContainerStyle,
