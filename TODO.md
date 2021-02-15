@@ -1,3 +1,2 @@
-- First thought
 - Work content
 - Animation

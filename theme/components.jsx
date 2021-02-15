@@ -1,5 +1,5 @@
 import Prism from "@theme-ui/prism";
-import { Link as A } from "theme-ui";
+import { Container, Link as A } from "theme-ui";
 import Link from "next/link";
 
 // https://github.com/leerob/leerob.io/blob/main/components/MDXComponents.js
@@ -22,6 +22,7 @@ const components = {
   pre: ({ children }) => <>{children}</>,
   code: Prism,
   a: CustomLink,
+  Container,
 };
 
 export default components;

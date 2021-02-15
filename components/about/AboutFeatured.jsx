@@ -31,7 +31,7 @@ export default function AboutFeatured({ works, thoughts, photos }) {
 
   const featuredWorks = works
     ?.sort((a, b) => b.slug.localeCompare(a.slug))
-    .slice(0, 4);
+    .slice(0, 8);
 
   const featuredThoughts = thoughts
     ?.sort((a, b) => b.slug.localeCompare(a.slug))
@@ -39,7 +39,7 @@ export default function AboutFeatured({ works, thoughts, photos }) {
 
   const featuredPhotos = photos
     ?.sort((a, b) => b.slug.localeCompare(a.slug))
-    .slice(0, 4);
+    .slice(0, 8);
 
   return (
     <Container>
