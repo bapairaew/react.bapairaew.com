@@ -15,8 +15,8 @@ export default function WorkLayout({ children, frontMatter }) {
   }, {});
 
   const techStack = [
-    tagsMap["App type"].join(" · "),
-    tagsMap.Layer.join(" · "),
+    tagsMap["App type"]?.join(" · "),
+    tagsMap.Layer?.join(" · "),
     [...(tagsMap.Framework || []), ...(tagsMap.Database || [])].join(" · "),
     tagsMap.Platform?.join(" · "),
     tagsMap.Language?.join(" · "),
