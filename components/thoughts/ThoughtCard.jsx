@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { Card, Heading, Link as A, Text } from "theme-ui";
+import { Card, Heading, NavLink as A, Text } from "theme-ui";
 
 export default function ThoughtCard({ thought }) {
   return (
-    <Link href={`/thoughts/${thought.slug}`}>
-      <A>
+    <Link href={`/thoughts/${thought.slug}`} passHref>
+      <A sx={{ textDecoration: "none" }}>
         <Card>
           <Heading as="h3" sx={{ fontWeight: "heading" }}>
             {thought.title}

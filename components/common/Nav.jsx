@@ -9,23 +9,23 @@ export default function Nav(props) {
       ? undefined
       : { color: "gray" };
   return (
-    <Box {...props}>
-      <Link href="/thoughts">
+    <Box {...props} passHref>
+      <Link href="/thoughts" passHref>
         <A mr={3} sx={getLinkStyle("/thoughts")}>
           Thoughts
         </A>
       </Link>
-      <Link href="/photos">
+      <Link href="/photos" passHref>
         <A mr={3} sx={getLinkStyle("/photos")}>
           Photos
         </A>
       </Link>
-      <Link href="/works">
+      <Link href="/works" passHref>
         <A mr={3} sx={getLinkStyle("/works")}>
           Works
         </A>
       </Link>
-      <Link href="/">
+      <Link href="/" passHref>
         <A sx={getLinkStyle("/", true)}>About</A>
       </Link>
     </Box>

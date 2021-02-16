@@ -24,7 +24,7 @@ export default function ThoughtLayout({ children, frontMatter }) {
         }}
       />
       <Container variant="layout.text">
-        <Link href="/thoughts">
+        <Link href="/thoughts" passHref>
           <A sx={{ mb: 4, color: "gray" }}>
             <Text>← Back</Text>
           </A>

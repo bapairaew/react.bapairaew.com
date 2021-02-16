@@ -49,7 +49,7 @@ export default function AboutFeatured({ works, thoughts, photos }) {
             <Heading>Works</Heading>
           </Box>
           <Box sx={{ display: ["none", "block"] }}>
-            <Link href="/works">
+            <Link href="/works" passHref>
               <A>See all →</A>
             </Link>
           </Box>
@@ -62,7 +62,7 @@ export default function AboutFeatured({ works, thoughts, photos }) {
           ))}
         </Grid>
         <Box p={4} sx={{ display: ["block", "none"], textAlign: "center" }}>
-          <Link href="/works">
+          <Link href="/works" passHref>
             <A>See all →</A>
           </Link>
         </Box>
@@ -116,7 +116,7 @@ export default function AboutFeatured({ works, thoughts, photos }) {
             <Heading sx={{ fontWeight: "display" }}>Thoughts</Heading>
           </Box>
           <Box sx={{ display: ["none", "block"] }}>
-            <Link href="/thoughts">
+            <Link href="/thoughts" passHref>
               <A>See all →</A>
             </Link>
           </Box>
@@ -133,7 +133,7 @@ export default function AboutFeatured({ works, thoughts, photos }) {
           ))}
         </Grid>
         <Box p={4} sx={{ display: ["block", "none"], textAlign: "center" }}>
-          <Link href="/thoughts">
+          <Link href="/thoughts" passHref>
             <A>See all →</A>
           </Link>
         </Box>
@@ -144,7 +144,7 @@ export default function AboutFeatured({ works, thoughts, photos }) {
             <Heading sx={{ fontWeight: "display" }}>Photos</Heading>
           </Box>
           <Box sx={{ display: ["none", "block"] }}>
-            <Link href="/photos">
+            <Link href="/photos" passHref>
               <A>See all →</A>
             </Link>
           </Box>
@@ -157,7 +157,7 @@ export default function AboutFeatured({ works, thoughts, photos }) {
           ))}
         </Grid>
         <Box p={4} sx={{ display: ["block", "none"], textAlign: "center" }}>
-          <Link href="/photos">
+          <Link href="/photos" passHref>
             <A>See all →</A>
           </Link>
         </Box>

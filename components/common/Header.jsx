@@ -7,7 +7,7 @@ export default function Header() {
     <Container py={[3, 3, 4]}>
       <Flex sx={{ flexWrap: "wrap" }}>
         <Box mb={3} sx={{ flex: "1 1 auto" }}>
-          <Link href="/">
+          <Link href="/" passHref>
             <A>
               <Heading>Narudom.</Heading>
             </A>

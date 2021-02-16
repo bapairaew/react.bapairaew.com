@@ -3,8 +3,8 @@ import { Card, Heading, Link as A, Text } from "theme-ui";
 
 export default function WorkCard({ work }) {
   return (
-    <Link href={`/works/${work.slug}`}>
-      <A>
+    <Link href={`/works/${work.slug}`} passHref>
+      <A sx={{ textDecoration: "none" }}>
         <Card>
           <Heading
             as="h2"

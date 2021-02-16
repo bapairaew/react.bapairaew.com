@@ -40,7 +40,7 @@ export default function WorkLayout({ children, frontMatter }) {
         }}
       />
       <Container variant="layout.text">
-        <Link href="/works">
+        <Link href="/works" passHref>
           <A sx={{ mb: 4, color: "gray" }}>
             <Text>← Back</Text>
           </A>

@@ -38,7 +38,7 @@ export default function NotFound() {
           is misspelt. If you are still not sure what is wrong maybe try to find
           the page from the start.
         </Text>
-        <Link href="/">
+        <Link href="/" passHref>
           <A>
             <Button>Return home</Button>
           </A>
