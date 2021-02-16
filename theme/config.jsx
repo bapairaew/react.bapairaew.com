@@ -39,7 +39,8 @@ const theme = merge(system, {
   },
   cards: {
     primary: {
-      padding: 2,
+      px: 3,
+      py: 4,
       borderRadius: 4,
       boxShadow: "0 0 8px rgba(0, 0, 0, 0.125)",
     },

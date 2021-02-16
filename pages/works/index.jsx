@@ -31,7 +31,7 @@ export default function Works({ works }) {
           Works
         </Heading>
       </Container>
-      <Grid gap={2} columns={["1fr 1fr", "1fr 1fr", "1fr 1fr 1fr 1fr"]}>
+      <Grid px={3} gap={2} columns={["1fr", "1fr 1fr", "1fr 1fr 1fr 1fr"]}>
         {works
           .sort((a, b) => b.slug.localeCompare(a.slug))
           .map((work) => (

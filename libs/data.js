@@ -36,9 +36,7 @@ export const getAllWorks = async () => {
 };
 
 export const getAllThoughts = async () => {
-  const thoughts = (await getMdxData("pages/thoughts/**/*.mdx")).map(
-    parseThought
-  );
+  const thoughts = (await getMdxData("pages/thoughts/*.mdx")).map(parseThought);
   return thoughts;
 };
 

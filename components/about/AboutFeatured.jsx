@@ -48,34 +48,52 @@ export default function AboutFeatured({ works, thoughts, photos }) {
           <Box sx={{ flex: "1 1 auto" }}>
             <Heading>Works</Heading>
           </Box>
-          <Box>
+          <Box sx={{ display: ["none", "block"] }}>
             <Link href="/works">
               <A>See all →</A>
             </Link>
           </Box>
         </Flex>
-        <Grid gap={2} columns={["1fr 1fr", "1fr 1fr", "1fr 1fr 1fr 1fr"]}>
+        <Grid gap={2} columns={["1fr", "1fr 1fr", "1fr 1fr 1fr 1fr"]}>
           {featuredWorks.map((work) => (
             <Box key={work.slug}>
               <WorkCard work={work} />
             </Box>
           ))}
         </Grid>
+        <Box p={4} sx={{ display: ["block", "none"], textAlign: "center" }}>
+          <Link href="/works">
+            <A>See all →</A>
+          </Link>
+        </Box>
       </Box>
-      <Box my={6}>
-        <Heading id="tools" variant="layout.text" mb={4}>
+      <Box my={5}>
+        <Heading
+          id="tools"
+          variant="layout.text"
+          mb={4}
+          sx={{ fontWeight: "display" }}
+        >
           Tools
         </Heading>
         <Grid
-          gap={2}
+          gap={0}
           columns={[
-            "1fr 1fr 1fr 1fr",
+            "1fr 1fr 1fr",
             "1fr 1fr 1fr 1fr",
             "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr",
           ]}
         >
           {tools.map((t) => (
-            <Box my={3} key={t.text}>
+            <Box
+              key={t.text}
+              p={2}
+              sx={{
+                borderStyle: "solid",
+                borderColor: "muted",
+                borderWidth: 1,
+              }}
+            >
               <Heading
                 as="h4"
                 sx={{
@@ -92,33 +110,40 @@ export default function AboutFeatured({ works, thoughts, photos }) {
           ))}
         </Grid>
       </Box>
-      <Box my={6}>
+      <Box my={5}>
         <Flex id="thoughts" variant="layout.text" mb={4}>
           <Box sx={{ flex: "1 1 auto" }}>
-            <Heading>Thoughts</Heading>
+            <Heading sx={{ fontWeight: "display" }}>Thoughts</Heading>
           </Box>
-          <Box>
+          <Box sx={{ display: ["none", "block"] }}>
             <Link href="/thoughts">
               <A>See all →</A>
             </Link>
           </Box>
         </Flex>
-        <Box variant="layout.text">
-          <Grid gap={2} columns={["1fr", "1fr", "1fr 1fr"]}>
-            {featuredThoughts?.map((thought) => (
-              <Box key={thought.slug}>
-                <ThoughtCard thought={thought} />
-              </Box>
-            ))}
-          </Grid>
+        <Grid
+          gap={2}
+          columns={["1fr", "1fr 1fr", "1fr 1fr"]}
+          sx={{ alignContent: "center" }}
+        >
+          {featuredThoughts?.map((thought) => (
+            <Box key={thought.slug}>
+              <ThoughtCard thought={thought} />
+            </Box>
+          ))}
+        </Grid>
+        <Box p={4} sx={{ display: ["block", "none"], textAlign: "center" }}>
+          <Link href="/thoughts">
+            <A>See all →</A>
+          </Link>
         </Box>
       </Box>
-      <Box my={6}>
+      <Box my={5}>
         <Flex id="photos" variant="layout.text" mb={4}>
           <Box sx={{ flex: "1 1 auto" }}>
-            <Heading>Photos</Heading>
+            <Heading sx={{ fontWeight: "display" }}>Photos</Heading>
           </Box>
-          <Box>
+          <Box sx={{ display: ["none", "block"] }}>
             <Link href="/photos">
               <A>See all →</A>
             </Link>
@@ -131,6 +156,11 @@ export default function AboutFeatured({ works, thoughts, photos }) {
             </Box>
           ))}
         </Grid>
+        <Box p={4} sx={{ display: ["block", "none"], textAlign: "center" }}>
+          <Link href="/photos">
+            <A>See all →</A>
+          </Link>
+        </Box>
       </Box>
     </Container>
   );

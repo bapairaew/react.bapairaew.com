@@ -15,7 +15,8 @@ export default function WorkLayout({ children, frontMatter }) {
   }, {});
 
   const techStack = [
-    [...(tagsMap["App type"] || []), ...(tagsMap.Layer || [])].join(" · "),
+    tagsMap["App type"].join(" · "),
+    tagsMap.Layer.join(" · "),
     [...(tagsMap.Framework || []), ...(tagsMap.Database || [])].join(" · "),
     tagsMap.Platform?.join(" · "),
     tagsMap.Language?.join(" · "),
@@ -44,14 +45,16 @@ export default function WorkLayout({ children, frontMatter }) {
             <Text>← Back</Text>
           </A>
         </Link>
-        <Text my={2} variant="subtitle">
+        <Text my={3} variant="subtitle">
           {[work.year, tagsMap.Company?.[0]].filter((x) => x).join(" · ")}
         </Text>
         <Heading as="h1" sx={{ fontWeight: "display" }}>
           {work.title}
         </Heading>
-        <Text sx={{ fontSize: 3 }}>{work.subtitle}</Text>
-        <Text my={2} variant="subtitle">
+        <Text my={3} sx={{ fontSize: 3 }}>
+          {work.subtitle}
+        </Text>
+        <Text my={3} variant="subtitle">
           {techStack}
         </Text>
       </Container>

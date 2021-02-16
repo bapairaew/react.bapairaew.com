@@ -13,7 +13,10 @@ export const parseWork = (work) => {
     "GraphQL",
     "Serverless",
     "React Native",
+    "React Native Web",
     "Expo",
+    "Serverless",
+    "SWR",
   ];
 
   const languages = [
@@ -31,7 +34,7 @@ export const parseWork = (work) => {
 
   const types = ["Mobile app", "Desktop app", "Web app"];
 
-  const platforms = ["iOS", "Android", "Symbian OS", "Windows Phone"];
+  const platforms = ["iOS", "Android", "Symbian", "Windows Phone", "Windows"];
 
   const database = ["MongoDB", "MySQL", "MSSQL"];
 
@@ -46,7 +49,7 @@ export const parseWork = (work) => {
     "Staples",
     "Thomson Reuters",
     "LSE",
-    "Imperial College",
+    "Imperial College London",
     "PwC",
     "Oddle",
     "Argile",
@@ -60,6 +63,7 @@ export const parseWork = (work) => {
     "Design system",
     "Chatbot",
     "Silverlight",
+    "AWS",
   ];
 
   const getTags = (work) => {
@@ -98,7 +102,7 @@ export const parseWork = (work) => {
 
 export const parseThought = (thought) => {
   return {
-    slug: thought.path.split("/").slice(-2).join("/").replace(".mdx", ""),
+    slug: thought.path.split("/").pop().replace(".mdx", ""),
     ...thought.data,
     publishedTime: thought.data.publishedTime?.toJSON(),
   };

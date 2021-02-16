@@ -1,38 +1,37 @@
 import Link from "next/link";
-import { Flex, Heading, Image, Text, AspectRatio, Link as A } from "theme-ui";
+import { Card, Heading, Link as A, Text } from "theme-ui";
 
 export default function WorkCard({ work }) {
   return (
     <Link href={`/works/${work.slug}`}>
       <A>
-        <Flex p={4} sx={{ flexDirection: "column", justifyContent: "center" }}>
-          <AspectRatio
-            ratio={1 / 1}
+        <Card>
+          <Heading
+            as="h2"
             sx={{
-              p: 4,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
+              fontWeight: "display",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+              whiteSpace: "nowrap",
             }}
           >
-            <Image
-              src={
-                work.image || "https://via.placeholder.com/500/FFFFFF/AAAAAA"
-              }
-              alt={work.title}
-            />
-          </AspectRatio>
-          <Heading as="h3" sx={{ fontWeight: "body", textAlign: "center" }}>
             {work.title}
           </Heading>
-          <Text color="gray" sx={{ textAlign: "center" }}>
-            {work.year}
+          <Text
+            mt={1}
+            color="gray"
+            sx={{
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+              whiteSpace: "nowrap",
+            }}
+          >
+            {work.subtitle || "—"}
           </Text>
           <Text
             mt={1}
             variant="subtitle"
             sx={{
-              textAlign: "center",
               overflow: "hidden",
               textOverflow: "ellipsis",
               whiteSpace: "nowrap",
@@ -40,7 +39,7 @@ export default function WorkCard({ work }) {
           >
             {work.tags.map((t) => t.text).join(" · ")}
           </Text>
-        </Flex>
+        </Card>
       </A>
     </Link>
   );
