@@ -4,7 +4,7 @@ Code for [my personal website](https://bapairaew.com/) built with
 [Theme UI](https://theme-ui.com/), [MDX](https://mdxjs.com/),
 [Next.js](https://nextjs.org/) and a few other libraries.
 
-Inspired by http://leerob.io/ and https://shud.in/.
+Inspired by https://leerob.io/ and https://shud.in/.
 
 Read about this website in
 [this post](https://bapairaew.com/posts/2021-02-12/updated-personal-website).

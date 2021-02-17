@@ -12,7 +12,7 @@ export const getStaticProps = async () => {
   };
 };
 
-export default function Seen({ photos }) {
+export default function Photography({ photos }) {
   return (
     <>
       <NextSeo
