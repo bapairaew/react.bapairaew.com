@@ -10,7 +10,7 @@ import {
 } from "theme-ui";
 import WorkCard from "~/components/works/WorkCard";
 import ThoughtCard from "~/components/thoughts/ThoughtCard";
-import PhotoCard from "~/components/photos/PhotoCard";
+import PhotoCard from "~/components/photography/PhotoCard";
 
 export default function AboutFeatured({ works, thoughts, photos }) {
   const tools = works
@@ -141,7 +141,7 @@ export default function AboutFeatured({ works, thoughts, photos }) {
       <Box my={5}>
         <Flex id="photos" variant="layout.text" mb={4}>
           <Box sx={{ flex: "1 1 auto" }}>
-            <Heading sx={{ fontWeight: "display" }}>Photos</Heading>
+            <Heading sx={{ fontWeight: "display" }}>Photography</Heading>
           </Box>
           <Box sx={{ display: ["none", "block"] }}>
             <Link href="/photos" passHref>

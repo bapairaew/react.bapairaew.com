@@ -1,7 +1,7 @@
 import { Box, Container, Grid, Heading } from "theme-ui";
 import Footer from "~/components/common/Footer";
 import Header from "~/components/common/Header";
-import PhotoCard from "~/components/photos/PhotoCard";
+import PhotoCard from "~/components/photography/PhotoCard";
 import { getAllPhotos } from "~/libs/data";
 import { NextSeo } from "next-seo";
 
@@ -16,10 +16,10 @@ export default function Seen({ photos }) {
   return (
     <>
       <NextSeo
-        title="Photos | Narudom"
+        title="Photography | Narudom"
         description="Some photos (badly) taken by a software engineer."
         openGraph={{
-          title: "Photos | Narudom",
+          title: "Photography | Narudom",
           description: "Some photos (badly) taken by a software engineer.",
           images: [],
           site_name: "Narudom",
@@ -28,7 +28,7 @@ export default function Seen({ photos }) {
       <Header />
       <Container>
         <Heading as="h1" sx={{ fontWeight: "display" }} mb={3}>
-          Photos
+          Photography
         </Heading>
       </Container>
       <Grid px={3} columns={["1fr 1fr", "1fr 1fr 1fr 1fr", "1fr 1fr 1fr 1fr"]}>

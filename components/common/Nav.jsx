@@ -15,9 +15,9 @@ export default function Nav(props) {
           Thoughts
         </A>
       </Link>
-      <Link href="/photos" passHref>
-        <A mr={3} sx={getLinkStyle("/photos")}>
-          Photos
+      <Link href="/photography" passHref>
+        <A mr={3} sx={getLinkStyle("/photography")}>
+          Photography
         </A>
       </Link>
       <Link href="/works" passHref>
