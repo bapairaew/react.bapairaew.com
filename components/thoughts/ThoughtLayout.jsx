@@ -13,14 +13,20 @@ export default function ThoughtLayout({ children, frontMatter }) {
     <>
       <Header />
       <NextSeo
-        {...frontMatter}
         title={`${frontMatter.title} | Narudom`}
         description={frontMatter.description}
+        keywords={frontMatter.keywords}
         openGraph={{
           title: `${frontMatter.title} | Narudom`,
           description: frontMatter.description,
           images: frontMatter.images || [],
           site_name: "Narudom",
+          type: "article",
+          article: {
+            publishedTime: frontMatter.publishedTime,
+            modifiedTime: frontMatter.modifiedTime,
+            tags: frontMatter.keywords?.split(", "),
+          },
         }}
       />
       <Container variant="layout.text">

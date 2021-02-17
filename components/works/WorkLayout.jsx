@@ -29,9 +29,9 @@ export default function WorkLayout({ children, frontMatter }) {
     <>
       <Header />
       <NextSeo
-        {...frontMatter}
         title={`${frontMatter.title} | Narudom`}
         description={frontMatter.description}
+        keywords={frontMatter.keywords}
         openGraph={{
           title: `${frontMatter.title} | Narudom`,
           description: frontMatter.description,

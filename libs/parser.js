@@ -95,6 +95,7 @@ export const parseWork = (work) => {
     title,
     subtitle: subtitle || null,
     description: work.data.description,
+    keywords: work.data.keywords,
     year: work.data.publishedTime?.toJSON().split("-")[0] || null,
     tags: getTags(work),
   };
@@ -103,8 +104,11 @@ export const parseWork = (work) => {
 export const parseThought = (thought) => {
   return {
     slug: thought.path.split("/").pop().replace(".mdx", ""),
-    ...thought.data,
+    title: thought.data.title,
+    description: thought.data.description,
+    keywords: thought.data.keywords,
     publishedTime: thought.data.publishedTime?.toJSON(),
+    modifiedTime: thought.data.modifiedTime?.toJSON(),
   };
 };
 
