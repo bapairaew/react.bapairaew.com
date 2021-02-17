@@ -60,10 +60,11 @@ export default function AboutHero() {
           example, React, Node.js, Java, and Serverless.
         </Text>
         <Text my={3}>
-          You can find the list of <Link href="#works">my works and tools</Link>{" "}
-          below but I would not say I am at "expert" in everything, just know
-          the basic of everything and very comfortable with a few. The most
-          comfortable tools that I am using are React and Node.js.
+          You can find the list of{" "}
+          <Link href="#projects">my projects and tools</Link> below but I would
+          not say I am at "expert" in everything, just know the basic of
+          everything and very comfortable with a few. The most comfortable tools
+          that I am using are React and Node.js.
         </Text>
       </Box>
     </Flex>

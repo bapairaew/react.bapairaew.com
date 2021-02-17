@@ -1,4 +1,4 @@
-export const parseWork = (work) => {
+export const parseProject = (project) => {
   const frameworks = [
     ".NET",
     "Qt",
@@ -66,8 +66,8 @@ export const parseWork = (work) => {
     "AWS",
   ];
 
-  const getTags = (work) => {
-    return work.data.keywords.split(", ").map((text) => {
+  const getTags = (project) => {
+    return project.data.keywords.split(", ").map((text) => {
       return {
         text,
         type: frameworks.includes(text)
@@ -89,15 +89,15 @@ export const parseWork = (work) => {
     });
   };
 
-  const [title, subtitle] = work.data.title.split(" - ");
+  const [title, subtitle] = project.data.title.split(" - ");
   return {
-    slug: work.path.split("/").pop().replace(".mdx", ""),
+    slug: project.path.split("/").pop().replace(".mdx", ""),
     title,
     subtitle: subtitle || null,
-    description: work.data.description,
-    keywords: work.data.keywords,
-    year: work.data.publishedTime?.toJSON().split("-")[0] || null,
-    tags: getTags(work),
+    description: project.data.description,
+    keywords: project.data.keywords,
+    year: project.data.publishedTime?.toJSON().split("-")[0] || null,
+    tags: getTags(project),
   };
 };
 

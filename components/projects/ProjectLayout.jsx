@@ -3,14 +3,14 @@ import Link from "next/link";
 import { Container, Heading, Text, NavLink as A } from "theme-ui";
 import Footer from "~/components/common/Footer";
 import Header from "~/components/common/Header";
-import { parseWork } from "~/libs/parser";
+import { parseProject } from "~/libs/parser";
 
-export default function WorkLayout({ children, frontMatter }) {
-  const work =
+export default function ProjectLayout({ children, frontMatter }) {
+  const project =
     frontMatter &&
-    parseWork({ data: frontMatter, path: frontMatter.__resourcePath });
+    parseProject({ data: frontMatter, path: frontMatter.__resourcePath });
 
-  const tagsMap = work.tags.reduce((map, tag) => {
+  const tagsMap = project.tags.reduce((map, tag) => {
     return { ...map, [tag.type]: [...(map[tag.type] || []), tag.text] };
   }, {});
 
@@ -40,19 +40,19 @@ export default function WorkLayout({ children, frontMatter }) {
         }}
       />
       <Container variant="layout.text">
-        <Link href="/works" passHref>
+        <Link href="/projects" passHref>
           <A sx={{ mb: 4, color: "gray" }}>
             <Text>← Back</Text>
           </A>
         </Link>
         <Text my={3} variant="subtitle">
-          {[work.year, tagsMap.Company?.[0]].filter((x) => x).join(" · ")}
+          {[project.year, tagsMap.Company?.[0]].filter((x) => x).join(" · ")}
         </Text>
         <Heading as="h1" sx={{ fontWeight: "display" }}>
-          {work.title}
+          {project.title}
         </Heading>
         <Text my={3} sx={{ fontSize: 3 }}>
-          {work.subtitle}
+          {project.subtitle}
         </Text>
         <Text my={3} variant="subtitle">
           {techStack}

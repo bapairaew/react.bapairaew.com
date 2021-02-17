@@ -8,12 +8,12 @@ import {
   NavLink as A,
   Text,
 } from "theme-ui";
-import WorkCard from "~/components/works/WorkCard";
+import ProjectCard from "~/components/projects/ProjectCard";
 import PostCard from "~/components/posts/PostCard";
 import PhotoCard from "~/components/photography/PhotoCard";
 
-export default function AboutFeatured({ works, posts, photos }) {
-  const tools = works
+export default function AboutFeatured({ projects, posts, photos }) {
+  const tools = projects
     .reduce((tools, w) => {
       for (const tool of w.tags.filter((t) =>
         ["Framework", "Language", "Platform", "Database"].includes(t.type)
@@ -29,7 +29,7 @@ export default function AboutFeatured({ works, posts, photos }) {
     }, [])
     .sort((a, b) => (a.count > b.count ? -1 : 1));
 
-  const featuredWorks = works
+  const featuredProjects = projects
     ?.sort((a, b) => b.slug.localeCompare(a.slug))
     .slice(0, 8);
 
@@ -44,25 +44,25 @@ export default function AboutFeatured({ works, posts, photos }) {
   return (
     <Container>
       <Box my={4}>
-        <Flex id="works" variant="layout.text" mb={4}>
+        <Flex id="projects" variant="layout.text" mb={4}>
           <Box sx={{ flex: "1 1 auto" }}>
-            <Heading>Works</Heading>
+            <Heading>Projects</Heading>
           </Box>
           <Box sx={{ display: ["none", "block"] }}>
-            <Link href="/works" passHref>
+            <Link href="/projects" passHref>
               <A>See all →</A>
             </Link>
           </Box>
         </Flex>
         <Grid gap={2} columns={["1fr", "1fr 1fr", "1fr 1fr 1fr 1fr"]}>
-          {featuredWorks.map((work) => (
-            <Box key={work.slug}>
-              <WorkCard work={work} />
+          {featuredProjects.map((project) => (
+            <Box key={project.slug}>
+              <ProjectCard project={project} />
             </Box>
           ))}
         </Grid>
         <Box p={4} sx={{ display: ["block", "none"], textAlign: "center" }}>
-          <Link href="/works" passHref>
+          <Link href="/projects" passHref>
             <A>See all →</A>
           </Link>
         </Box>

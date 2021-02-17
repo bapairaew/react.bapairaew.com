@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { Card, Heading, Link as A, Text } from "theme-ui";
 
-export default function WorkCard({ work }) {
+export default function ProjectCard({ project }) {
   return (
-    <Link href={`/works/${work.slug}`} passHref>
+    <Link href={`/projects/${project.slug}`} passHref>
       <A sx={{ textDecoration: "none" }}>
         <Card>
           <Heading
@@ -15,7 +15,7 @@ export default function WorkCard({ work }) {
               whiteSpace: "nowrap",
             }}
           >
-            {work.title}
+            {project.title}
           </Heading>
           <Text
             mt={1}
@@ -26,7 +26,7 @@ export default function WorkCard({ work }) {
               whiteSpace: "nowrap",
             }}
           >
-            {work.subtitle || "—"}
+            {project.subtitle || "—"}
           </Text>
           <Text
             mt={1}
@@ -37,7 +37,7 @@ export default function WorkCard({ work }) {
               whiteSpace: "nowrap",
             }}
           >
-            {work.tags.map((t) => t.text).join(" · ")}
+            {project.tags.map((t) => t.text).join(" · ")}
           </Text>
         </Card>
       </A>
