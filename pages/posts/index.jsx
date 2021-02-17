@@ -30,16 +30,16 @@ export default function Posts({ posts }) {
         <Heading as="h1" sx={{ fontWeight: "display" }}>
           Posts
         </Heading>
+        <Grid mt={3} columns={"1fr"}>
+          {posts
+            .sort((a, b) => b.slug.localeCompare(a.slug))
+            .map((post) => (
+              <Box key={post.slug}>
+                <PostCard post={post} />
+              </Box>
+            ))}
+        </Grid>
       </Container>
-      <Grid my={4} gap={2} columns={"1fr"} variant="layout.text">
-        {posts
-          .sort((a, b) => b.slug.localeCompare(a.slug))
-          .map((post) => (
-            <Box key={post.slug}>
-              <PostCard post={post} />
-            </Box>
-          ))}
-      </Grid>
       <Footer />
     </>
   );

@@ -30,16 +30,19 @@ export default function Photography({ photos }) {
         <Heading as="h1" sx={{ fontWeight: "display" }} mb={3}>
           Photography
         </Heading>
+        <Grid
+          mt={3}
+          columns={["1fr 1fr", "1fr 1fr 1fr 1fr", "1fr 1fr 1fr 1fr"]}
+        >
+          {photos
+            .sort((a, b) => b.slug.localeCompare(a.slug))
+            .map((photo) => (
+              <Box key={photo.slug}>
+                <PhotoCard photo={photo} />
+              </Box>
+            ))}
+        </Grid>
       </Container>
-      <Grid px={3} columns={["1fr 1fr", "1fr 1fr 1fr 1fr", "1fr 1fr 1fr 1fr"]}>
-        {photos
-          .sort((a, b) => b.slug.localeCompare(a.slug))
-          .map((photo) => (
-            <Box key={photo.slug}>
-              <PhotoCard photo={photo} />
-            </Box>
-          ))}
-      </Grid>
       <Footer />
     </>
   );

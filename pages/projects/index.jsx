@@ -30,16 +30,16 @@ export default function Projects({ projects }) {
         <Heading as="h1" sx={{ fontWeight: "display" }}>
           Projects
         </Heading>
+        <Grid mt={3} columns={["1fr", "1fr 1fr", "1fr 1fr 1fr 1fr"]}>
+          {projects
+            .sort((a, b) => b.slug.localeCompare(a.slug))
+            .map((project) => (
+              <Box key={project.slug}>
+                <ProjectCard project={project} />
+              </Box>
+            ))}
+        </Grid>
       </Container>
-      <Grid px={3} gap={2} columns={["1fr", "1fr 1fr", "1fr 1fr 1fr 1fr"]}>
-        {projects
-          .sort((a, b) => b.slug.localeCompare(a.slug))
-          .map((project) => (
-            <Box key={project.slug}>
-              <ProjectCard project={project} />
-            </Box>
-          ))}
-      </Grid>
       <Footer />
     </>
   );
