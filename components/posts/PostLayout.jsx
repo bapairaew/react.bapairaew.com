@@ -3,12 +3,12 @@ import Link from "next/link";
 import { Container, Heading, Text, NavLink as A } from "theme-ui";
 import Footer from "~/components/common/Footer";
 import Header from "~/components/common/Header";
-import { parseThought } from "~/libs/parser";
+import { parsePost } from "~/libs/parser";
 
-export default function ThoughtLayout({ children, frontMatter }) {
-  const thought =
+export default function PostLayout({ children, frontMatter }) {
+  const post =
     frontMatter &&
-    parseThought({ data: frontMatter, path: frontMatter.__resourcePath });
+    parsePost({ data: frontMatter, path: frontMatter.__resourcePath });
   return (
     <>
       <Header />
@@ -30,23 +30,23 @@ export default function ThoughtLayout({ children, frontMatter }) {
         }}
       />
       <Container variant="layout.text">
-        <Link href="/thoughts" passHref>
+        <Link href="/posts" passHref>
           <A sx={{ mb: 4, color: "gray" }}>
             <Text>← Back</Text>
           </A>
         </Link>
         <Heading as="h1" sx={{ fontWeight: "display" }}>
-          {thought.title}
+          {post.title}
         </Heading>
         <Text my={3} variant="subtitle">
           {[
-            new Date(thought.publishedTime).toLocaleDateString(undefined, {
+            new Date(post.publishedTime).toLocaleDateString(undefined, {
               weekday: "long",
               year: "numeric",
               month: "long",
               day: "numeric",
             }),
-            thought.keywords,
+            post.keywords,
           ]
             .filter((x) => x)
             .join(" · ")}

@@ -1,21 +1,21 @@
 import Link from "next/link";
 import { Card, Heading, NavLink as A, Text } from "theme-ui";
 
-export default function ThoughtCard({ thought }) {
+export default function PostCard({ post }) {
   return (
-    <Link href={`/thoughts/${thought.slug}`} passHref>
+    <Link href={`/posts/${post.slug}`} passHref>
       <A sx={{ textDecoration: "none" }}>
         <Card>
           <Heading as="h3" sx={{ fontWeight: "heading" }}>
-            {thought.title}
+            {post.title}
           </Heading>
           <Text my={3} sx={{ fontSize: 1 }}>
-            {thought.description}
+            {post.description}
             <Text sx={{ textDecoration: "underline" }}>Read more →</Text>
           </Text>
-          {thought.publishedTime && (
+          {post.publishedTime && (
             <Text my={3} variant="subtitle">
-              {new Date(thought.publishedTime).toLocaleDateString()}
+              {new Date(post.publishedTime).toLocaleDateString()}
             </Text>
           )}
         </Card>

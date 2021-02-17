@@ -101,14 +101,14 @@ export const parseWork = (work) => {
   };
 };
 
-export const parseThought = (thought) => {
+export const parsePost = (post) => {
   return {
-    slug: thought.path.split("/").pop().replace(".mdx", ""),
-    title: thought.data.title,
-    description: thought.data.description,
-    keywords: thought.data.keywords,
-    publishedTime: thought.data.publishedTime?.toJSON(),
-    modifiedTime: thought.data.modifiedTime?.toJSON(),
+    slug: post.path.split("/").pop().replace(".mdx", ""),
+    title: post.data.title,
+    description: post.data.description,
+    keywords: post.data.keywords,
+    publishedTime: post.data.publishedTime?.toJSON(),
+    modifiedTime: post.data.modifiedTime?.toJSON(),
   };
 };
 

@@ -7,13 +7,13 @@ Code for [my personal website](https://bapairaew.com/) built with
 Inspired by http://leerob.io/ and https://shud.in/.
 
 Read about this website in
-[this post](https://bapairaew.com/thoughts/2021-02-12/updated-personal-website).
+[this post](https://bapairaew.com/posts/2021-02-12/updated-personal-website).
 
 ## Project structure
 
 Mainly follows [Next.js](https://nextjs.org/).
 
-- `pages/thoughts` - all blog posts written in MDX
+- `pages/posts` - all posts written in MDX
 - `public/photos` - all photos with its metadata
 
 ## Dev

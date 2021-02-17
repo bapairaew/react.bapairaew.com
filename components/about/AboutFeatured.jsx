@@ -9,10 +9,10 @@ import {
   Text,
 } from "theme-ui";
 import WorkCard from "~/components/works/WorkCard";
-import ThoughtCard from "~/components/thoughts/ThoughtCard";
+import PostCard from "~/components/posts/PostCard";
 import PhotoCard from "~/components/photography/PhotoCard";
 
-export default function AboutFeatured({ works, thoughts, photos }) {
+export default function AboutFeatured({ works, posts, photos }) {
   const tools = works
     .reduce((tools, w) => {
       for (const tool of w.tags.filter((t) =>
@@ -33,7 +33,7 @@ export default function AboutFeatured({ works, thoughts, photos }) {
     ?.sort((a, b) => b.slug.localeCompare(a.slug))
     .slice(0, 8);
 
-  const featuredThoughts = thoughts
+  const featuredPosts = posts
     ?.sort((a, b) => b.slug.localeCompare(a.slug))
     .slice(0, 4);
 
@@ -111,12 +111,12 @@ export default function AboutFeatured({ works, thoughts, photos }) {
         </Grid>
       </Box>
       <Box my={5}>
-        <Flex id="thoughts" variant="layout.text" mb={4}>
+        <Flex id="posts" variant="layout.text" mb={4}>
           <Box sx={{ flex: "1 1 auto" }}>
-            <Heading sx={{ fontWeight: "display" }}>Thoughts</Heading>
+            <Heading sx={{ fontWeight: "display" }}>Posts</Heading>
           </Box>
           <Box sx={{ display: ["none", "block"] }}>
-            <Link href="/thoughts" passHref>
+            <Link href="/posts" passHref>
               <A>See all →</A>
             </Link>
           </Box>
@@ -126,14 +126,14 @@ export default function AboutFeatured({ works, thoughts, photos }) {
           columns={["1fr", "1fr 1fr", "1fr 1fr"]}
           sx={{ alignContent: "center" }}
         >
-          {featuredThoughts?.map((thought) => (
-            <Box key={thought.slug}>
-              <ThoughtCard thought={thought} />
+          {featuredPosts?.map((post) => (
+            <Box key={post.slug}>
+              <PostCard post={post} />
             </Box>
           ))}
         </Grid>
         <Box p={4} sx={{ display: ["block", "none"], textAlign: "center" }}>
-          <Link href="/thoughts" passHref>
+          <Link href="/posts" passHref>
             <A>See all →</A>
           </Link>
         </Box>

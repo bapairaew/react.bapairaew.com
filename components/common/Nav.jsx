@@ -10,9 +10,9 @@ export default function Nav(props) {
       : { color: "gray" };
   return (
     <Box {...props} passHref>
-      <Link href="/thoughts" passHref>
-        <A mr={3} sx={getLinkStyle("/thoughts")}>
-          Thoughts
+      <Link href="/posts" passHref>
+        <A mr={3} sx={getLinkStyle("/posts")}>
+          Posts
         </A>
       </Link>
       <Link href="/photography" passHref>

@@ -3,7 +3,7 @@ import fs from "fs";
 import * as globby from "globby";
 import * as matter from "gray-matter";
 import { promisify } from "util";
-import { parsePhoto, parseThought, parseWork } from "~/libs/parser";
+import { parsePhoto, parsePost, parseWork } from "~/libs/parser";
 
 export const getMdxData = async (pattern) => {
   const data = await Promise.all(
@@ -35,9 +35,9 @@ export const getAllWorks = async () => {
   return works;
 };
 
-export const getAllThoughts = async () => {
-  const thoughts = (await getMdxData("pages/thoughts/*.mdx")).map(parseThought);
-  return thoughts;
+export const getAllPosts = async () => {
+  const posts = (await getMdxData("pages/posts/*.mdx")).map(parsePost);
+  return posts;
 };
 
 export const getAllPhotos = async () => {

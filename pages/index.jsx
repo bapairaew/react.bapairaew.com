@@ -3,18 +3,18 @@ import AboutFeatured from "~/components/about/AboutFeatured";
 import AboutHeader from "~/components/about/AboutHeader";
 import AboutHero from "~/components/about/AboutHero";
 import Footer from "~/components/common/Footer";
-import { getAllPhotos, getAllThoughts, getAllWorks } from "~/libs/data";
+import { getAllPhotos, getAllPosts, getAllWorks } from "~/libs/data";
 
 export const getStaticProps = async () => {
   const works = await getAllWorks();
-  const thoughts = await getAllThoughts();
+  const posts = await getAllPosts();
   const photos = await getAllPhotos();
   return {
-    props: { works, thoughts, photos },
+    props: { works, posts, photos },
   };
 };
 
-export default function Home({ works, thoughts, photos }) {
+export default function Home({ works, posts, photos }) {
   return (
     <>
       <NextSeo
@@ -29,7 +29,7 @@ export default function Home({ works, thoughts, photos }) {
       />
       <AboutHeader />
       <AboutHero />
-      <AboutFeatured works={works} thoughts={thoughts} photos={photos} />
+      <AboutFeatured works={works} posts={posts} photos={photos} />
       <Footer />
     </>
   );
