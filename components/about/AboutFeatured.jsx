@@ -144,7 +144,7 @@ export default function AboutFeatured({ projects, posts, photos }) {
             <Heading sx={{ fontWeight: "display" }}>Photography</Heading>
           </Box>
           <Box sx={{ display: ["none", "block"] }}>
-            <Link href="/photos" passHref>
+            <Link href="/photography" passHref>
               <A>See all →</A>
             </Link>
           </Box>
@@ -157,7 +157,7 @@ export default function AboutFeatured({ projects, posts, photos }) {
           ))}
         </Grid>
         <Box p={4} sx={{ display: ["block", "none"], textAlign: "center" }}>
-          <Link href="/photos" passHref>
+          <Link href="/photography" passHref>
             <A>See all →</A>
           </Link>
         </Box>
