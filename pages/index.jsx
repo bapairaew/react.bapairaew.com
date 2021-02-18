@@ -1,8 +1,8 @@
 import { NextSeo } from "next-seo";
 import AboutFeatured from "~/components/about/AboutFeatured";
-import AboutHeader from "~/components/about/AboutHeader";
 import AboutHero from "~/components/about/AboutHero";
 import Footer from "~/components/common/Footer";
+import Header from "~/components/common/Header";
 import { getAllPhotos, getAllPosts, getAllProjects } from "~/libs/data";
 
 export const getStaticProps = async () => {
@@ -27,7 +27,7 @@ export default function Home({ projects, posts, photos }) {
           site_name: "Narudom",
         }}
       />
-      <AboutHeader />
+      <Header />
       <AboutHero />
       <AboutFeatured projects={projects} posts={posts} photos={photos} />
       <Footer />

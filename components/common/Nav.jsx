@@ -11,26 +11,26 @@ export default function Nav(props) {
   return (
     <Box {...props} passHref>
       <Link href="/lists" passHref>
-        <A mr={3} sx={getLinkStyle("/lists")}>
+        <A mb={3} mr={3} sx={getLinkStyle("/lists")}>
           Lists
         </A>
       </Link>
       <Link href="/posts" passHref>
-        <A mr={3} sx={getLinkStyle("/posts")}>
+        <A mb={3} mr={3} sx={getLinkStyle("/posts")}>
           Posts
         </A>
       </Link>
       <Link href="/photography" passHref>
-        <A mr={3} sx={getLinkStyle("/photography")}>
+        <A mb={3} mr={3} sx={getLinkStyle("/photography")}>
           Photography
         </A>
       </Link>
       <Link href="/projects" passHref>
-        <A mr={3} sx={getLinkStyle("/projects")}>
+        <A mb={3} mr={3} sx={getLinkStyle("/projects")}>
           Projects
         </A>
       </Link>
-      <Link href="/" passHref>
+      <Link mb={3} href="/" passHref>
         <A sx={getLinkStyle("/", true)}>About</A>
       </Link>
     </Box>

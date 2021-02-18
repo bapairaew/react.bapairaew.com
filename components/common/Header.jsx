@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Box, Container, Flex, Heading, NavLink as A } from "theme-ui";
 import Nav from "~/components/common/Nav";
+import NavMenu from "~/components/common/NavMenu";
 
 export default function Header() {
   return (
@@ -13,7 +14,16 @@ export default function Header() {
             </A>
           </Link>
         </Box>
-        <Nav mb={3} />
+        <Box sx={{ display: ["none", "block", "block"] }}>
+          <Nav />
+        </Box>
+        <Box sx={{ display: ["block", "none", "none"] }}>
+          <NavMenu>
+            <Nav
+              sx={{ display: "flex", flexDirection: "column", fontSize: 3 }}
+            />
+          </NavMenu>
+        </Box>
       </Flex>
     </Container>
   );
