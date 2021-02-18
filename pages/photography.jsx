@@ -1,9 +1,9 @@
-import { Box, Container, Grid, Heading } from "theme-ui";
+import { NextSeo } from "next-seo";
+import { Box, Container, Divider, Grid, Heading } from "theme-ui";
 import Footer from "~/components/common/Footer";
 import Header from "~/components/common/Header";
 import PhotoCard from "~/components/photography/PhotoCard";
 import { getAllPhotos } from "~/libs/data";
-import { NextSeo } from "next-seo";
 
 export const getStaticProps = async () => {
   const photos = await getAllPhotos();
@@ -30,10 +30,8 @@ export default function Photography({ photos }) {
         <Heading as="h1" sx={{ fontWeight: "display" }} mb={3}>
           Photography
         </Heading>
-        <Grid
-          mt={3}
-          columns={["1fr 1fr", "1fr 1fr 1fr 1fr", "1fr 1fr 1fr 1fr"]}
-        >
+        <Divider />
+        <Grid mt={4} columns={["1fr", "1fr 1fr 1fr 1fr", "1fr 1fr 1fr 1fr"]}>
           {photos
             .sort((a, b) => b.slug.localeCompare(a.slug))
             .map((photo) => (

@@ -1,7 +1,7 @@
 import { AspectRatio, Flex, Text, Box } from "theme-ui";
 import Image from "next/image";
 
-export default function PhotoCard({ photo }) {
+export default function TrackCard({ track }) {
   return (
     <Flex sx={{ flexDirection: "column", justifyContent: "center" }}>
       <AspectRatio
@@ -10,24 +10,20 @@ export default function PhotoCard({ photo }) {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          overflow: "hidden",
         }}
       >
         <Image
           layout="fill"
           objectFit="cover"
-          src={`/photos/${photo.slug}.jpeg`}
-          alt={photo.place}
+          src={track.album.images[0].url}
+          alt={track.name}
         />
       </AspectRatio>
       <Box my={1}>
-        <Text sx={{ textAlign: "center" }}>{photo.place}</Text>
-        <Text variant="subtitle" sx={{ textAlign: "center" }}>
-          {[
-            photo.date && new Date(photo.date).toLocaleDateString(),
-            photo.camera,
-          ]
-            .filter((x) => x)
-            .join(" · ")}
+        <Text>{track.name}</Text>
+        <Text variant="subtitle">
+          {track.artists.map((a) => a.name).join(", ")}
         </Text>
       </Box>
     </Flex>

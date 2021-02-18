@@ -3,6 +3,7 @@ import { Box, Container } from "theme-ui";
 export default function Footer() {
   return (
     <Container
+      as="footer"
       pt={6}
       pb={4}
       color="gray"

@@ -2,6 +2,7 @@ import Link from "next/link";
 import {
   Box,
   Container,
+  Divider,
   Flex,
   Grid,
   Heading,
@@ -67,7 +68,8 @@ export default function AboutFeatured({ projects, posts, photos }) {
           </Link>
         </Box>
       </Box>
-      <Box my={5}>
+      <Divider />
+      <Box my={4}>
         <Heading
           id="tools"
           variant="layout.text"
@@ -110,7 +112,8 @@ export default function AboutFeatured({ projects, posts, photos }) {
           ))}
         </Grid>
       </Box>
-      <Box my={5}>
+      <Divider />
+      <Box my={4}>
         <Flex id="posts" variant="layout.text" mb={4}>
           <Box sx={{ flex: "1 1 auto" }}>
             <Heading sx={{ fontWeight: "display" }}>Posts</Heading>
@@ -138,7 +141,8 @@ export default function AboutFeatured({ projects, posts, photos }) {
           </Link>
         </Box>
       </Box>
-      <Box my={5}>
+      <Divider />
+      <Box my={4}>
         <Flex id="photos" variant="layout.text" mb={4}>
           <Box sx={{ flex: "1 1 auto" }}>
             <Heading sx={{ fontWeight: "display" }}>Photography</Heading>

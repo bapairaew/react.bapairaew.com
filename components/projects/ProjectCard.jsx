@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { Card, Heading, Link as A, Text } from "theme-ui";
+import { Card, Heading, NavLink as A, Text } from "theme-ui";
 
 export default function ProjectCard({ project }) {
   return (
     <Link href={`/projects/${project.slug}`} passHref>
-      <A sx={{ textDecoration: "none" }}>
+      <A sx={{ width: "100%" }}>
         <Card>
           <Heading
             as="h2"

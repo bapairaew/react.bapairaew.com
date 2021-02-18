@@ -1,9 +1,9 @@
-import Header from "~/components/common/Header";
-import Footer from "~/components/common/Footer";
-import { getAllProjects } from "~/libs/data";
-import { Box, Container, Grid, Heading } from "theme-ui";
-import ProjectCard from "~/components/projects/ProjectCard";
 import { NextSeo } from "next-seo";
+import { Box, Container, Divider, Grid, Heading } from "theme-ui";
+import Footer from "~/components/common/Footer";
+import Header from "~/components/common/Header";
+import ProjectCard from "~/components/projects/ProjectCard";
+import { getAllProjects } from "~/libs/data";
 
 export const getStaticProps = async () => {
   const projects = await getAllProjects();
@@ -30,7 +30,8 @@ export default function Projects({ projects }) {
         <Heading as="h1" sx={{ fontWeight: "display" }}>
           Projects
         </Heading>
-        <Grid mt={3} columns={["1fr", "1fr 1fr", "1fr 1fr 1fr 1fr"]}>
+        <Divider />
+        <Grid mt={4} columns={["1fr", "1fr 1fr", "1fr 1fr 1fr 1fr"]}>
           {projects
             .sort((a, b) => b.slug.localeCompare(a.slug))
             .map((project) => (

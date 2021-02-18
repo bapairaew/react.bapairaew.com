@@ -4,12 +4,12 @@ import Nav from "~/components/common/Nav";
 
 export default function Header() {
   return (
-    <Container py={[3, 3, 4]}>
+    <Container as="header" py={[3, 3, 4]}>
       <Flex sx={{ flexWrap: "wrap" }}>
         <Box mb={3} sx={{ flex: "1 1 auto" }}>
           <Link href="/" passHref>
             <A>
-              <Heading>Narudom.</Heading>
+              <Heading>N.</Heading>
             </A>
           </Link>
         </Box>

@@ -4,7 +4,7 @@ import { Card, Heading, NavLink as A, Text } from "theme-ui";
 export default function PostCard({ post }) {
   return (
     <Link href={`/posts/${post.slug}`} passHref>
-      <A sx={{ textDecoration: "none" }}>
+      <A sx={{ width: "100%" }}>
         <Card>
           <Heading as="h3" sx={{ fontWeight: "heading" }}>
             {post.title}
