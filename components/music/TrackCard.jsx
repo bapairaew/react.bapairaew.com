@@ -3,7 +3,18 @@ import Image from "next/image";
 
 export default function TrackCard({ track }) {
   return (
-    <Flex sx={{ flexDirection: "column", justifyContent: "center" }}>
+    <Flex
+      sx={{
+        flexDirection: "column",
+        justifyContent: "center",
+        textDecoration: "none",
+        color: "text",
+      }}
+      as="a"
+      href={track.external_urls.spotify}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <AspectRatio
         ratio={1 / 1}
         sx={{

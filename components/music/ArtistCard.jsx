@@ -1,5 +1,5 @@
-import { AspectRatio, Flex, Text, Box } from "theme-ui";
 import Image from "next/image";
+import { AspectRatio, Box, Flex, Text } from "theme-ui";
 
 export default function ArtistCard({ artist }) {
   return (
@@ -7,7 +7,13 @@ export default function ArtistCard({ artist }) {
       sx={{
         flexDirection: "column",
         justifyContent: "center",
+        textDecoration: "none",
+        color: "text",
       }}
+      as="a"
+      href={artist.external_urls.spotify}
+      target="_blank"
+      rel="noopener noreferrer"
     >
       <AspectRatio
         ratio={1 / 1}
