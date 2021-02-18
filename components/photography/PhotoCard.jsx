@@ -5,7 +5,7 @@ export default function PhotoCard({ photo }) {
   return (
     <Flex sx={{ flexDirection: "column", justifyContent: "center" }}>
       <AspectRatio
-        ratio={1 / 1}
+        ratio={4 / 3}
         sx={{
           display: "flex",
           alignItems: "center",
