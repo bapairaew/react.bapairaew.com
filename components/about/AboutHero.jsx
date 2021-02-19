@@ -24,6 +24,15 @@ export default function AboutHero() {
       <Flex my={3}>
         <Link
           sx={{ color: "gray" }}
+          href="https://github.com/bapairaew"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Github ↗
+        </Link>
+        <Text mx={2}> · </Text>
+        <Link
+          sx={{ color: "gray" }}
           href="https://www.linkedin.com/in/ntechaval/"
           target="_blank"
           rel="noopener noreferrer"
