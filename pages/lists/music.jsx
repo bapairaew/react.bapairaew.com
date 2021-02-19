@@ -41,9 +41,9 @@ export default function Music({ tracks, artists }) {
           <Grid
             mt={4}
             columns={[
-              "1fr 1fr 1fr 1fr 1fr",
-              "1fr 1fr 1fr 1fr 1fr",
-              "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr",
+              "1fr 1fr 1fr",
+              "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr",
+              "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr",
             ]}
           >
             {artists.map((artist) => (
