@@ -8,12 +8,12 @@ const textContainerStyle = {
 };
 
 const theme = merge(system, {
+  colors: {
+    muted: "#e8e8e8",
+  },
   fonts: {
     body:
       '"Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
-  },
-  sizes: {
-    container: 1320,
   },
   text: {
     subtitle: {
@@ -31,6 +31,25 @@ const theme = merge(system, {
       mx: "auto",
     },
   },
+  sizes: {
+    container: 1320,
+  },
+  radii: {
+    none: "0",
+    sm: "0.125rem",
+    default: "0.25rem",
+    lg: "0.5rem",
+    full: "9999px",
+  },
+  zIndices: {
+    0: "0",
+    10: "10",
+    20: "20",
+    30: "30",
+    40: "40",
+    50: "50",
+    auto: "auto",
+  },
   links: {
     nav: {
       fontWeight: "body",
@@ -41,12 +60,13 @@ const theme = merge(system, {
     primary: {
       px: 3,
       py: 4,
-      borderRadius: 4,
+      borderRadius: "default",
       boxShadow: "0 0 8px rgba(0, 0, 0, 0.125)",
+      backgroundColor: "background",
     },
     compact: {
       padding: 1,
-      borderRadius: 2,
+      borderRadius: "sm",
       border: "1px solid",
       borderColor: "muted",
     },
