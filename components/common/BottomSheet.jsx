@@ -27,12 +27,13 @@ export default function BottomSheet({ children, ...props }) {
       {...props}
     >
       <Card
+        variant="compact"
         m={0}
         pt={3}
         sx={{ borderBottomRightRadius: 0, borderBottomLeftRadius: 0 }}
       >
         <BottomSheetIndicator />
-        <Box mt={4}>{children}</Box>
+        <Box p={4}>{children}</Box>
       </Card>
     </SwipeableBottomSheet>
   );

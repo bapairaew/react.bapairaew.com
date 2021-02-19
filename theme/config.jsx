@@ -67,6 +67,12 @@ const theme = merge(system, {
       borderColor: "text",
       backgroundColor: "background",
     },
+    compact: {
+      p: 1,
+      border: "1px solid",
+      borderColor: "text",
+      backgroundColor: "background",
+    },
   },
   buttons: {
     primary: {
