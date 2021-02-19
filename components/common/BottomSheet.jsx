@@ -24,6 +24,7 @@ export default function BottomSheet({ children, ...props }) {
     <SwipeableBottomSheet
       style={{ zIndex: theme.zIndices[50] }}
       bodyStyle={{ backgroundColor: "transparent" }}
+      overlayStyle={{ backgroundColor: theme.colors.background }}
       {...props}
     >
       <Card
