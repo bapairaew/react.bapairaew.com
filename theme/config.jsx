@@ -58,17 +58,14 @@ const theme = merge(system, {
   },
   cards: {
     primary: {
-      px: 3,
-      py: 4,
+      p: 3,
       borderRadius: "default",
-      boxShadow: "0 0 8px rgba(0, 0, 0, 0.125)",
+      borderTop: "1px solid",
+      borderLeft: "1px solid",
+      borderBottom: "4px solid",
+      borderRight: "4px solid",
+      borderColor: "text",
       backgroundColor: "background",
-    },
-    compact: {
-      padding: 1,
-      borderRadius: "sm",
-      border: "1px solid",
-      borderColor: "muted",
     },
   },
   buttons: {

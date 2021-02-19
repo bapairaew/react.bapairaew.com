@@ -79,18 +79,20 @@ export default function AboutFeatured({ projects, posts, photos }) {
           Tools
         </Heading>
         <Grid
-          gap={0}
+          gap={1}
           columns={[
             "1fr 1fr 1fr",
             "1fr 1fr 1fr 1fr",
-            "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr",
+            "1fr 1fr 1fr 1fr 1fr 1fr",
           ]}
         >
           {tools.map((t) => (
-            <Box
+            <Flex
               key={t.text}
               p={2}
               sx={{
+                flexDirection: "column",
+                justifyContent: "center",
                 borderStyle: "solid",
                 borderColor: "muted",
                 borderWidth: 1,
@@ -108,7 +110,7 @@ export default function AboutFeatured({ projects, posts, photos }) {
               <Text variant="subtitle" sx={{ textAlign: "center" }}>
                 {t.count} project{t.count > 1 ? "s" : ""}
               </Text>
-            </Box>
+            </Flex>
           ))}
         </Grid>
       </Box>
