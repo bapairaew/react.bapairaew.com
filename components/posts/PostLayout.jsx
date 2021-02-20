@@ -38,7 +38,7 @@ export default function PostLayout({ children, frontMatter }) {
         <Heading as="h1" sx={{ fontWeight: "display" }}>
           {post.title}
         </Heading>
-        <Text my={3} variant="subtitle">
+        <Text as="p" my={3} variant="subtitle">
           {[
             new Date(post.publishedTime).toLocaleDateString(undefined, {
               weekday: "long",
@@ -52,7 +52,7 @@ export default function PostLayout({ children, frontMatter }) {
             .join(" · ")}
         </Text>
       </Container>
-      {children}
+      <article>{children}</article>
       <Footer />
     </>
   );

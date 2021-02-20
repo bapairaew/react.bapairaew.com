@@ -31,12 +31,17 @@ export default function Photography({ photos }) {
           Photography
         </Heading>
         <Divider />
-        <Grid mt={4} columns={["1fr", "1fr 1fr 1fr 1fr", "1fr 1fr 1fr 1fr"]}>
+        <Grid
+          as="ul"
+          p={0}
+          mt={4}
+          columns={["1fr", "1fr 1fr 1fr 1fr", "1fr 1fr 1fr 1fr"]}
+        >
           {photos
             .sort((a, b) => b.slug.localeCompare(a.slug))
             .map((photo) => (
-              <Box key={photo.slug}>
-                <PhotoCard photo={photo} />
+              <Box key={photo.slug} as="li" sx={{ listStyleType: "none" }}>
+                <PhotoCard titleAs="h2" photo={photo} />
               </Box>
             ))}
         </Grid>

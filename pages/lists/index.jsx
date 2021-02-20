@@ -1,6 +1,7 @@
 import { NextSeo } from "next-seo";
 import Link from "next/link";
 import {
+  Box,
   Card,
   Container,
   Divider,
@@ -33,18 +34,27 @@ export default function Lists() {
           Lists
         </Heading>
         <Divider />
-        <Grid mt={4} columns={["1fr", "1fr 1fr"]}>
+        <Grid as="ul" p={0} mt={4} columns={["1fr", "1fr 1fr"]}>
           {lists.map((item) => (
-            <Link href={item.href} passHref>
-              <A>
-                <Card key={item.title}>
-                  <Flex sx={{ justifyContent: "space-between" }}>
-                    <Heading>{item.title}</Heading>
-                    <Heading>→</Heading>
-                  </Flex>
-                </Card>
-              </A>
-            </Link>
+            <Box key={item.title} as="li" sx={{ listStyleType: "none" }}>
+              <Link href={item.href} passHref>
+                <A sx={{ width: "100%" }}>
+                  <Card>
+                    <Flex
+                      sx={{
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                      }}
+                    >
+                      <Heading as="h2">{item.title}</Heading>
+                      <Heading as="div" sx={{ fontSize: 3 }}>
+                        →
+                      </Heading>
+                    </Flex>
+                  </Card>
+                </A>
+              </Link>
+            </Box>
           ))}
         </Grid>
       </Container>

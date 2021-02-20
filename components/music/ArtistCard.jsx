@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { AspectRatio, Box, Flex, Text } from "theme-ui";
+import { AspectRatio, Box, Flex, Heading } from "theme-ui";
 
-export default function ArtistCard({ artist }) {
+export default function ArtistCard({ artist, titleAs = "h3" }) {
   return (
     <Flex
       sx={{
@@ -33,7 +33,13 @@ export default function ArtistCard({ artist }) {
         />
       </AspectRatio>
       <Box my={1}>
-        <Text sx={{ textAlign: "center" }}>{artist.name}</Text>
+        <Heading
+          as={titleAs}
+          sx={{ textAlign: "center", fontSize: 2, fontWeight: "body" }}
+          my={2}
+        >
+          {artist.name}
+        </Heading>
       </Box>
     </Flex>
   );

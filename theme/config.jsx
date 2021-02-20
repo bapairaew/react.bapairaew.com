@@ -9,6 +9,7 @@ const textContainerStyle = {
 
 const theme = merge(system, {
   colors: {
+    gray: "#555",
     muted: "#e8e8e8",
   },
   fonts: {

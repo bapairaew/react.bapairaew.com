@@ -39,6 +39,8 @@ export default function Music({ tracks, artists }) {
             Artists
           </Heading>
           <Grid
+            as="ul"
+            p={0}
             mt={4}
             columns={[
               "1fr 1fr 1fr",
@@ -47,8 +49,8 @@ export default function Music({ tracks, artists }) {
             ]}
           >
             {artists.map((artist) => (
-              <Box key={artist.id}>
-                <ArtistCard artist={artist} />
+              <Box key={artist.id} as="li" sx={{ listStyleType: "none" }}>
+                <ArtistCard titleAs="h3" artist={artist} />
               </Box>
             ))}
           </Grid>
@@ -59,12 +61,14 @@ export default function Music({ tracks, artists }) {
             Tracks
           </Heading>
           <Grid
+            as="ul"
+            p={0}
             mt={4}
             columns={["1fr 1fr", "1fr 1fr 1fr 1fr", "1fr 1fr 1fr 1fr 1fr"]}
           >
             {tracks.map((track) => (
-              <Box key={track.id}>
-                <TrackCard track={track} />
+              <Box key={track.id} as="li" sx={{ listStyleType: "none" }}>
+                <TrackCard titleAs="h3" track={track} />
               </Box>
             ))}
           </Grid>

@@ -31,12 +31,17 @@ export default function Projects({ projects }) {
           Projects
         </Heading>
         <Divider />
-        <Grid mt={4} columns={["1fr", "1fr 1fr", "1fr 1fr 1fr 1fr"]}>
+        <Grid
+          as="ul"
+          p={0}
+          mt={4}
+          columns={["1fr", "1fr 1fr", "1fr 1fr 1fr 1fr"]}
+        >
           {projects
             .sort((a, b) => b.slug.localeCompare(a.slug))
             .map((project) => (
-              <Box key={project.slug}>
-                <ProjectCard project={project} />
+              <Box key={project.slug} as="li" sx={{ listStyleType: "none" }}>
+                <ProjectCard titleAs="h2" project={project} />
               </Box>
             ))}
         </Grid>

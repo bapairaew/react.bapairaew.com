@@ -1,7 +1,7 @@
-import { AspectRatio, Flex, Text, Box } from "theme-ui";
+import { AspectRatio, Flex, Text, Box, Heading } from "theme-ui";
 import Image from "next/image";
 
-export default function PhotoCard({ photo }) {
+export default function PhotoCard({ photo, titleAs = "h3" }) {
   return (
     <Flex sx={{ flexDirection: "column", justifyContent: "center" }}>
       <AspectRatio
@@ -20,8 +20,17 @@ export default function PhotoCard({ photo }) {
         />
       </AspectRatio>
       <Box my={1}>
-        <Text sx={{ textAlign: "center" }}>{photo.place}</Text>
-        <Text variant="subtitle" sx={{ textAlign: "center" }}>
+        <Heading
+          as={titleAs}
+          sx={{ textAlign: "center", fontSize: 2, fontWeight: "body" }}
+        >
+          {photo.place}
+        </Heading>
+        <Text
+          as="p"
+          variant="subtitle"
+          sx={{ textAlign: "center", fontSize: 1 }}
+        >
           {[
             photo.date && new Date(photo.date).toLocaleDateString(),
             photo.camera,

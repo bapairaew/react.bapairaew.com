@@ -10,7 +10,9 @@ export default function Header() {
         <Box mb={3} sx={{ flex: "1 1 auto" }}>
           <Link href="/" passHref>
             <A>
-              <Heading>N.</Heading>
+              <Heading as="span" sx={{ fontSize: 4 }} title="Narudom">
+                N.
+              </Heading>
             </A>
           </Link>
         </Box>

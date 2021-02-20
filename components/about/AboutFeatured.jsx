@@ -47,7 +47,7 @@ export default function AboutFeatured({ projects, posts, photos }) {
       <Box my={4}>
         <Flex id="projects" variant="layout.text" mb={4}>
           <Box sx={{ flex: "1 1 auto" }}>
-            <Heading>Projects</Heading>
+            <Heading as="h2">Projects</Heading>
           </Box>
           <Box sx={{ display: ["none", "block"] }}>
             <Link href="/projects" passHref>
@@ -55,10 +55,15 @@ export default function AboutFeatured({ projects, posts, photos }) {
             </Link>
           </Box>
         </Flex>
-        <Grid gap={2} columns={["1fr", "1fr 1fr", "1fr 1fr 1fr 1fr"]}>
+        <Grid
+          as="ul"
+          p={0}
+          gap={2}
+          columns={["1fr", "1fr 1fr", "1fr 1fr 1fr 1fr"]}
+        >
           {featuredProjects.map((project) => (
-            <Box key={project.slug}>
-              <ProjectCard project={project} />
+            <Box key={project.slug} as="li" sx={{ listStyleType: "none" }}>
+              <ProjectCard titleAs="h3" project={project} />
             </Box>
           ))}
         </Grid>
@@ -72,6 +77,7 @@ export default function AboutFeatured({ projects, posts, photos }) {
       <Box my={4}>
         <Heading
           id="tools"
+          as="h2"
           variant="layout.text"
           mb={4}
           sx={{ fontWeight: "display" }}
@@ -79,6 +85,8 @@ export default function AboutFeatured({ projects, posts, photos }) {
           Tools
         </Heading>
         <Grid
+          as="ul"
+          p={0}
           gap={1}
           columns={[
             "1fr 1fr 1fr",
@@ -90,24 +98,27 @@ export default function AboutFeatured({ projects, posts, photos }) {
             <Flex
               key={t.text}
               p={2}
+              as="li"
               sx={{
                 flexDirection: "column",
                 justifyContent: "center",
                 borderStyle: "solid",
                 borderColor: "muted",
                 borderWidth: 1,
+                listStyleType: "none",
               }}
             >
               <Heading
-                as="h4"
+                as="h3"
                 sx={{
+                  fontSize: 2,
                   textAlign: "center",
                   fontWeight: "display",
                 }}
               >
                 {t.text}
               </Heading>
-              <Text variant="subtitle" sx={{ textAlign: "center" }}>
+              <Text as="p" variant="subtitle" sx={{ textAlign: "center" }}>
                 {t.count} project{t.count > 1 ? "s" : ""}
               </Text>
             </Flex>
@@ -118,7 +129,9 @@ export default function AboutFeatured({ projects, posts, photos }) {
       <Box my={4}>
         <Flex id="posts" variant="layout.text" mb={4}>
           <Box sx={{ flex: "1 1 auto" }}>
-            <Heading sx={{ fontWeight: "display" }}>Posts</Heading>
+            <Heading as="h2" sx={{ fontWeight: "display" }}>
+              Posts
+            </Heading>
           </Box>
           <Box sx={{ display: ["none", "block"] }}>
             <Link href="/posts" passHref>
@@ -127,13 +140,15 @@ export default function AboutFeatured({ projects, posts, photos }) {
           </Box>
         </Flex>
         <Grid
+          as="ul"
+          p={0}
           gap={2}
           columns={["1fr", "1fr 1fr", "1fr 1fr"]}
           sx={{ alignContent: "center" }}
         >
           {featuredPosts?.map((post) => (
-            <Box key={post.slug}>
-              <PostCard post={post} />
+            <Box key={post.slug} as="li" sx={{ listStyleType: "none" }}>
+              <PostCard titleAs="h3" post={post} />
             </Box>
           ))}
         </Grid>
@@ -147,7 +162,9 @@ export default function AboutFeatured({ projects, posts, photos }) {
       <Box my={4}>
         <Flex id="photos" variant="layout.text" mb={4}>
           <Box sx={{ flex: "1 1 auto" }}>
-            <Heading sx={{ fontWeight: "display" }}>Photography</Heading>
+            <Heading as="h2" sx={{ fontWeight: "display" }}>
+              Photography
+            </Heading>
           </Box>
           <Box sx={{ display: ["none", "block"] }}>
             <Link href="/photography" passHref>
@@ -155,10 +172,14 @@ export default function AboutFeatured({ projects, posts, photos }) {
             </Link>
           </Box>
         </Flex>
-        <Grid columns={["1fr 1fr", "1fr 1fr 1fr 1fr", "1fr 1fr 1fr 1fr"]}>
+        <Grid
+          as="ul"
+          p={0}
+          columns={["1fr 1fr", "1fr 1fr 1fr 1fr", "1fr 1fr 1fr 1fr"]}
+        >
           {featuredPhotos?.map((photo) => (
-            <Box key={photo.slug}>
-              <PhotoCard photo={photo} />
+            <Box key={photo.slug} as="li" sx={{ listStyleType: "none" }}>
+              <PhotoCard titleAs="h3" photo={photo} />
             </Box>
           ))}
         </Grid>

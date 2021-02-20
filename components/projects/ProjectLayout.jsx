@@ -45,20 +45,20 @@ export default function ProjectLayout({ children, frontMatter }) {
             <Text>← Back</Text>
           </A>
         </Link>
-        <Text my={3} variant="subtitle">
+        <Text as="p" my={3} variant="subtitle">
           {[project.year, tagsMap.Company?.[0]].filter((x) => x).join(" · ")}
         </Text>
         <Heading as="h1" sx={{ fontWeight: "display" }}>
           {project.title}
         </Heading>
-        <Text my={3} sx={{ fontSize: 3 }}>
+        <Text as="p" my={3} sx={{ fontSize: 3 }}>
           {project.subtitle}
         </Text>
-        <Text my={3} variant="subtitle">
+        <Text as="p" my={3} variant="subtitle">
           {techStack}
         </Text>
       </Container>
-      {children}
+      <article>{children}</article>
       <Footer />
     </>
   );

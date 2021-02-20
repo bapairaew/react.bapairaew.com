@@ -31,12 +31,12 @@ export default function Posts({ posts }) {
           Posts
         </Heading>
         <Divider />
-        <Grid mt={4} columns={"1fr"}>
+        <Grid as="ul" p={0} mt={4} columns={"1fr"}>
           {posts
             .sort((a, b) => b.slug.localeCompare(a.slug))
             .map((post) => (
-              <Box key={post.slug}>
-                <PostCard post={post} />
+              <Box key={post.slug} as="li" sx={{ listStyleType: "none" }}>
+                <PostCard titleAs="h2" post={post} />
               </Box>
             ))}
         </Grid>

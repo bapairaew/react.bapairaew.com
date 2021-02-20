@@ -33,7 +33,7 @@ export default function NotFound() {
         <Heading as="h1" sx={{ fontWeight: "display" }}>
           Page not found
         </Heading>
-        <Text my={3}>
+        <Text as="p" my={3}>
           Well, this URL seems wrong. Either it has already been changed or it
           is misspelt. If you are still not sure what is wrong maybe try to find
           the page from the start.

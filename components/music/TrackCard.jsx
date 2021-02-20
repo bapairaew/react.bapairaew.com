@@ -1,7 +1,7 @@
-import { AspectRatio, Flex, Text, Box } from "theme-ui";
+import { AspectRatio, Flex, Text, Box, Heading } from "theme-ui";
 import Image from "next/image";
 
-export default function TrackCard({ track }) {
+export default function TrackCard({ track, titleAs = "h3" }) {
   return (
     <Flex
       sx={{
@@ -32,8 +32,10 @@ export default function TrackCard({ track }) {
         />
       </AspectRatio>
       <Box my={1}>
-        <Text>{track.name}</Text>
-        <Text variant="subtitle">
+        <Heading as={titleAs} sx={{ fontSize: 2, fontWeight: "body" }}>
+          {track.name}
+        </Heading>
+        <Text as="p" variant="subtitle">
           {track.artists.map((a) => a.name).join(", ")}
         </Text>
       </Box>
