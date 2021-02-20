@@ -7,7 +7,7 @@ export default function Nav(props) {
   const getLinkStyle = (path, exact = false) =>
     (exact ? router.pathname === path : router.pathname.startsWith(path))
       ? undefined
-      : { color: "gray" };
+      : { color: "gray", textDecoration: "underline" };
   return (
     <Box {...props} passHref>
       <Link href="/lists" passHref>
