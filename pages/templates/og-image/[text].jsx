@@ -1,13 +1,14 @@
 import { readFileSync } from "fs";
+import { resolve } from "path";
 import { NextSeo } from "next-seo";
 import Head from "next/head";
 import { Box, Flex, Heading } from "theme-ui";
 
 export const getServerSideProps = async ({ query }) => {
   // Make sure font is loaded prior of screenshot being taken
-  const font = readFileSync("public/fonts/inter-var-latin.woff2").toString(
-    "base64"
-  );
+  const font = readFileSync(
+    resolve(`./public/fonts/inter-var-latin.woff2`)
+  ).toString("base64");
   return {
     props: { text: query.text || "Narudom", font },
   };
