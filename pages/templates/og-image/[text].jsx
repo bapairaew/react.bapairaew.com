@@ -3,7 +3,7 @@ import { Box, Flex, Heading } from "theme-ui";
 
 export const getServerSideProps = async ({ query }) => {
   return {
-    props: { text: query.text || "Narudom", font },
+    props: { text: query.text || "Narudom" },
   };
 };
 
