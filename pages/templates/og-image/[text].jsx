@@ -7,7 +7,7 @@ import { Box, Flex, Heading } from "theme-ui";
 export const getServerSideProps = async ({ query }) => {
   // Make sure font is loaded prior of screenshot being taken
   const font = readFileSync(
-    resolve(`./public/fonts/inter-var-latin.woff2`)
+    resolve("./public", "fonts/inter-var-latin.woff2")
   ).toString("base64");
   return {
     props: { text: query.text || "Narudom", font },
