@@ -4,6 +4,7 @@ import Footer from "~/components/common/Footer";
 import Header from "~/components/common/Header";
 import PostCard from "~/components/posts/PostCard";
 import { getAllPosts } from "~/libs/data";
+import { getOgImgeUrlObject } from "~/libs/og-image";
 
 export const getStaticProps = async () => {
   const posts = await getAllPosts();
@@ -21,7 +22,7 @@ export default function Posts({ posts }) {
         openGraph={{
           title: "Posts | Narudom",
           description: "An engineer's (random) thoughts on things.",
-          images: [],
+          images: getOgImgeUrlObject("Posts"),
           site_name: "Narudom",
         }}
       />

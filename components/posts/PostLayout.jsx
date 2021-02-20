@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Container, Heading, Text, NavLink as A } from "theme-ui";
 import Footer from "~/components/common/Footer";
 import Header from "~/components/common/Header";
+import { getOgImgeUrlObject } from "~/libs/og-image";
 import { parsePost } from "~/libs/parser";
 
 export default function PostLayout({ children, frontMatter }) {
@@ -19,7 +20,7 @@ export default function PostLayout({ children, frontMatter }) {
         openGraph={{
           title: `${frontMatter.title} | Narudom`,
           description: frontMatter.description,
-          images: frontMatter.images || [],
+          images: frontMatter.images || getOgImgeUrlObject(frontMatter.title),
           site_name: "Narudom",
           type: "article",
           article: {

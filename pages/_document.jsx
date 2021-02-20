@@ -21,7 +21,7 @@ export default class extends Document {
             rel="stylesheet"
             href={googleFontsUrl}
             media="print"
-            onload="this.media='all'"
+            onLoad="this.media='all'"
           />
         </Head>
         <body>

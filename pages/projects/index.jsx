@@ -4,6 +4,7 @@ import Footer from "~/components/common/Footer";
 import Header from "~/components/common/Header";
 import ProjectCard from "~/components/projects/ProjectCard";
 import { getAllProjects } from "~/libs/data";
+import { getOgImgeUrlObject } from "~/libs/og-image";
 
 export const getStaticProps = async () => {
   const projects = await getAllProjects();
@@ -21,7 +22,7 @@ export default function Projects({ projects }) {
         openGraph={{
           title: "Projects | Narudom",
           description: "(Almost) all Narudom's software engineering projects.",
-          images: [],
+          images: getOgImgeUrlObject("Projects"),
           site_name: "Narudom",
         }}
       />

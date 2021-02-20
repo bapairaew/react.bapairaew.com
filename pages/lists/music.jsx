@@ -4,6 +4,7 @@ import Footer from "~/components/common/Footer";
 import Header from "~/components/common/Header";
 import ArtistCard from "~/components/music/ArtistCard";
 import TrackCard from "~/components/music/TrackCard";
+import { getOgImgeUrlObject } from "~/libs/og-image";
 import { getTopArtists, getTopTracks } from "~/libs/spotify";
 
 export const getStaticProps = async () => {
@@ -20,11 +21,11 @@ export default function Music({ tracks, artists }) {
     <>
       <NextSeo
         title="Music | Narudom"
-        description=""
+        description="An engineer's Top listened music from Spotify"
         openGraph={{
           title: "Music | Narudom",
-          description: "",
-          images: [],
+          description: "An engineer's Top listened music from Spotify",
+          images: getOgImgeUrlObject("Music"),
           site_name: "Narudom",
         }}
       />

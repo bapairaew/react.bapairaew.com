@@ -12,6 +12,7 @@ import {
 } from "theme-ui";
 import Footer from "~/components/common/Footer";
 import Header from "~/components/common/Header";
+import { getOgImgeUrlObject } from "~/libs/og-image";
 
 const lists = [{ title: "Music", href: "/lists/music" }];
 
@@ -24,7 +25,7 @@ export default function Lists() {
         openGraph={{
           title: "Lists | Narudom",
           description: "Lists of things that I enjoy.",
-          images: [],
+          images: getOgImgeUrlObject("Lists"),
           site_name: "Narudom",
         }}
       />

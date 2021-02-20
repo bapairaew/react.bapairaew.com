@@ -4,6 +4,7 @@ import AboutHero from "~/components/about/AboutHero";
 import Footer from "~/components/common/Footer";
 import Header from "~/components/common/Header";
 import { getAllPhotos, getAllPosts, getAllProjects } from "~/libs/data";
+import { getOgImgeUrlObject } from "~/libs/og-image";
 
 export const getStaticProps = async () => {
   const projects = await getAllProjects();
@@ -23,7 +24,7 @@ export default function Home({ projects, posts, photos }) {
         openGraph={{
           title: "Narudom",
           description: "A software engineer portfolio.",
-          images: [],
+          images: getOgImgeUrlObject("Narudom"),
           site_name: "Narudom",
         }}
       />
