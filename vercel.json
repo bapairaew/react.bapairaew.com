@@ -1,6 +1,5 @@
 
 {
-  "regions": ["all"],
   "rewrites": [
     { "source": "/og-image/:match", "destination": "/api/og-image/:match" }
   ]
