@@ -1,4 +1,5 @@
 import { Box, Flex, Heading, Link, Text } from "theme-ui";
+import GlitchHeading from "~/components/common/GlitchHeading";
 
 export default function AboutHero() {
   return (
@@ -10,14 +11,14 @@ export default function AboutHero() {
         flexDirection: "column",
       }}
     >
-      <Heading
+      <GlitchHeading
         as="h1"
         sx={{ fontSize: [6, 8, 8], textAlign: "center", fontWeight: "display" }}
       >
         Narudom
         <br />
         Techaval
-      </Heading>
+      </GlitchHeading>
       <Text mt={3} color="gray" sx={{ fontSize: [3, 4, 4] }}>
         Software Engineer
       </Text>
