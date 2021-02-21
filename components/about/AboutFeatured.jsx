@@ -47,7 +47,9 @@ export default function AboutFeatured({ projects, posts, photos }) {
       <Box my={4}>
         <Flex id="projects" variant="layout.text" mb={4}>
           <Box sx={{ flex: "1 1 auto" }}>
-            <Heading as="h2">Projects</Heading>
+            <Heading as="h2" sx={{ fontWeight: "display" }}>
+              Projects
+            </Heading>
           </Box>
           <Box sx={{ display: ["none", "block"] }}>
             <Link href="/projects" passHref>

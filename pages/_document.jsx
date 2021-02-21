@@ -1,9 +1,6 @@
 import Document, { Main, NextScript, Head, Html } from "next/document";
 import { InitializeColorMode } from "theme-ui";
 
-const googleFontsUrl =
-  "https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap";
-
 export default class extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx);
