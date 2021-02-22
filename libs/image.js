@@ -9,3 +9,13 @@ export function getOgImgeUrlObject(text) {
       ]
     : [];
 }
+
+export function getPhotoUrlObject(slug) {
+  return canon_root
+    ? [
+        {
+          url: `${canon_root}/photos/${slug}.jpeg`,
+        },
+      ]
+    : [];
+}

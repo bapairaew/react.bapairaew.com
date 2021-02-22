@@ -122,5 +122,9 @@ export const parsePhoto = (photo) => {
       photo.data.CreateDate?.toJSON() ||
       null,
     camera: photo.data.Model ? [photo.data.Model] : null,
+    aperture: photo.data.FNumber,
+    iso: photo.data.ISO,
+    focalLength: photo.data.FocalLength,
+    exposureTime: photo.data.ExposureTime,
   };
 };

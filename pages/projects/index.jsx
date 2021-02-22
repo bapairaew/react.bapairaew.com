@@ -4,7 +4,7 @@ import Footer from "~/components/common/Footer";
 import Header from "~/components/common/Header";
 import ProjectCard from "~/components/projects/ProjectCard";
 import { getAllProjects } from "~/libs/data";
-import { getOgImgeUrlObject } from "~/libs/og-image";
+import { getOgImgeUrlObject } from "~/libs/image";
 
 export const getStaticProps = async () => {
   const projects = await getAllProjects();

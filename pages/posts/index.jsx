@@ -4,7 +4,7 @@ import Footer from "~/components/common/Footer";
 import Header from "~/components/common/Header";
 import PostCard from "~/components/posts/PostCard";
 import { getAllPosts } from "~/libs/data";
-import { getOgImgeUrlObject } from "~/libs/og-image";
+import { getOgImgeUrlObject } from "~/libs/image";
 
 export const getStaticProps = async () => {
   const posts = await getAllPosts();

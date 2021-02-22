@@ -1,10 +1,19 @@
 import { NextSeo } from "next-seo";
-import { Box, Container, Divider, Grid, Heading } from "theme-ui";
+import Link from "next/link";
+import {
+  Box,
+  Container,
+  Divider,
+  Grid,
+  Heading,
+  NavLink as A,
+  Text,
+} from "theme-ui";
 import Footer from "~/components/common/Footer";
 import Header from "~/components/common/Header";
 import ArtistCard from "~/components/music/ArtistCard";
 import TrackCard from "~/components/music/TrackCard";
-import { getOgImgeUrlObject } from "~/libs/og-image";
+import { getOgImgeUrlObject } from "~/libs/image";
 import { getTopArtists, getTopTracks } from "~/libs/spotify";
 
 export const getStaticProps = async () => {
@@ -31,6 +40,11 @@ export default function Music({ tracks, artists }) {
       />
       <Header />
       <Container>
+        <Link href="/lists" passHref>
+          <A sx={{ mb: 4, color: "gray" }}>
+            <Text>← Back</Text>
+          </A>
+        </Link>
         <Heading as="h1" sx={{ fontWeight: "display" }} mb={3}>
           Music
         </Heading>

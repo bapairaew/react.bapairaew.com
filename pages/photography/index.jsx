@@ -4,7 +4,7 @@ import Footer from "~/components/common/Footer";
 import Header from "~/components/common/Header";
 import PhotoCard from "~/components/photography/PhotoCard";
 import { getAllPhotos } from "~/libs/data";
-import { getOgImgeUrlObject } from "~/libs/og-image";
+import { getOgImgeUrlObject } from "~/libs/image";
 
 export const getStaticProps = async () => {
   const photos = await getAllPhotos();

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Container, Heading, Text, NavLink as A } from "theme-ui";
 import Footer from "~/components/common/Footer";
 import Header from "~/components/common/Header";
-import { getOgImgeUrlObject } from "~/libs/og-image";
+import { getOgImgeUrlObject } from "~/libs/image";
 import { parseProject } from "~/libs/parser";
 
 export default function ProjectLayout({ children, frontMatter }) {
