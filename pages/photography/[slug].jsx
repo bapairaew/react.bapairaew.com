@@ -32,7 +32,7 @@ export const getStaticProps = async ({ params: { slug } }) => {
   const path = `public/photos/${slug}.jpeg`;
   const photo = parsePhoto({
     path,
-    data: await promisify(fs.readFile)(path).then(exifr.parse),
+    exif: await promisify(fs.readFile)(path).then(exifr.parse),
   });
   return {
     props: { photo },
@@ -63,7 +63,7 @@ export default function SinglePhotography({ photo }) {
       />
       <Header />
       <Container>
-        <Link href="/posts" passHref>
+        <Link href="/photography" passHref>
           <A sx={{ mb: 4, color: "gray" }}>
             <Text>← Back</Text>
           </A>
@@ -71,7 +71,7 @@ export default function SinglePhotography({ photo }) {
         <Flex sx={{ flexDirection: ["column", "row"] }}>
           <Box sx={{ flexBasis: ["auto", 800] }}>
             <AspectRatio
-              ratio={4 / 3}
+              ratio={photo.width / photo.height}
               sx={{
                 display: "flex",
                 alignItems: "center",
@@ -109,7 +109,7 @@ export default function SinglePhotography({ photo }) {
                 <Text as="dt" variant="subtitle">
                   Aperture
                 </Text>
-                <Text as="dd">{photo.aperture}</Text>
+                <Text as="dd">ƒ / {photo.fnumber}</Text>
               </Box>
               <Box>
                 <Text as="dt" variant="subtitle">

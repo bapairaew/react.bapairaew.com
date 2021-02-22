@@ -113,18 +113,20 @@ export const parsePost = (post) => {
 };
 
 export const parsePhoto = (photo) => {
-  const parts = photo.data.ImageDescription.split(", ");
+  const parts = photo.exif.ImageDescription?.split(", ");
   return {
     slug: photo.path.split("/").pop().replace(".jpeg", ""),
     place: [parts[0], parts.pop()].join(", "),
     date:
-      photo.data.DateTimeOriginal?.toJSON() ||
-      photo.data.CreateDate?.toJSON() ||
+      photo.exif.DateTimeOriginal?.toJSON() ||
+      photo.exif.CreateDate?.toJSON() ||
       null,
-    camera: photo.data.Model ? [photo.data.Model] : null,
-    aperture: photo.data.FNumber,
-    iso: photo.data.ISO,
-    focalLength: photo.data.FocalLength,
-    exposureTime: photo.data.ExposureTime,
+    camera: photo.exif.Model ? [photo.exif.Model] : null,
+    fnumber: photo.exif.FNumber,
+    iso: photo.exif.ISO,
+    focalLength: photo.exif.FocalLength,
+    exposureTime: photo.exif.ExposureTime,
+    width: photo.exif.ExifImageWidth,
+    height: photo.exif.ExifImageHeight,
   };
 };

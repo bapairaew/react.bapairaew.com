@@ -23,7 +23,7 @@ export const getImageData = async (pattern) => {
     (await globby(pattern)).map((path) =>
       promisify(fs.readFile)(path)
         .then(exifr.parse)
-        .then((data) => ({ data, path }))
+        .then((exif) => ({ exif, path }))
     )
   );
 
