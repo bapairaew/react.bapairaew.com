@@ -36,7 +36,7 @@ export default function PostLayout({ children, frontMatter }) {
             <Text>← Posts</Text>
           </A>
         </Link>
-        <Heading as="h1" sx={{ fontWeight: "display" }}>
+        <Heading as="h1" variant="display">
           {post.title}
         </Heading>
         <Text as="p" my={3} variant="subtitle">

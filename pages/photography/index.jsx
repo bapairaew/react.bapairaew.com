@@ -28,7 +28,7 @@ export default function Photography({ photos }) {
       />
       <Header />
       <Container>
-        <Heading as="h1" sx={{ fontWeight: "display" }} mb={3}>
+        <Heading as="h1" variant="display" mb={3}>
           Photography
         </Heading>
         <Divider />

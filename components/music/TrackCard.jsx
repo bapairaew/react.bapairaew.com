@@ -41,22 +41,11 @@ export default function TrackCard({ track, titleAs = "h3" }) {
               sx={{
                 fontSize: 2,
                 fontWeight: "body",
-                whiteSpace: "nowrap",
-                overflow: "hidden",
-                textOverflow: "ellipsis",
               }}
             >
               {track.name}
             </Heading>
-            <Text
-              as="p"
-              variant="subtitle"
-              sx={{
-                whiteSpace: "nowrap",
-                overflow: "hidden",
-                textOverflow: "ellipsis",
-              }}
-            >
+            <Text as="p" variant="subtitle">
               {track.artists.map((a) => a.name).join(", ")}
             </Text>
           </Box>

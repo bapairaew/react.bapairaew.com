@@ -12,7 +12,8 @@ export default function AboutHero() {
     >
       <Heading
         as="h1"
-        sx={{ fontSize: [6, 8, 8], textAlign: "center", fontWeight: "display" }}
+        variant="display"
+        sx={{ fontSize: [6, 8, 8], textAlign: "center" }}
       >
         Narudom
         <br />

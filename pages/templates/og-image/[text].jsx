@@ -25,7 +25,7 @@ export default function OgImage({ text }) {
           alignItems: "center",
         }}
       >
-        <Heading as="h1" sx={{ fontWeight: "display", fontSize: "7vw" }}>
+        <Heading as="h1" variant="display" sx={{ fontSize: "7vw" }}>
           {text}
         </Heading>
         <Box

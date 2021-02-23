@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Card, Heading, NavLink as A, Text } from "theme-ui";
+import { Card, Flex, Heading, NavLink as A, Text } from "theme-ui";
 
 export default function PostCard({ post, titleAs = "h3" }) {
   return (
@@ -9,17 +9,19 @@ export default function PostCard({ post, titleAs = "h3" }) {
           <Heading as={titleAs} sx={{ fontWeight: "heading", fontSize: 3 }}>
             {post.title}
           </Heading>
-          <Text as="p" my={3} sx={{ fontSize: 1 }}>
+          <Text as="p" my={3}>
             {post.description}
-            <Text as="i" sx={{ textDecoration: "underline" }}>
+          </Text>
+          <Flex sx={{ justifyContent: "space-between", alignItems: "center" }}>
+            {post.publishedTime && (
+              <Text as="p" my={3} variant="subtitle">
+                {new Date(post.publishedTime).toLocaleDateString()}
+              </Text>
+            )}
+            <Text variant="subtitle" sx={{ textDecoration: "underline" }}>
               Read more →
             </Text>
-          </Text>
-          {post.publishedTime && (
-            <Text as="p" my={3} variant="subtitle">
-              {new Date(post.publishedTime).toLocaleDateString()}
-            </Text>
-          )}
+          </Flex>
         </Card>
       </A>
     </Link>

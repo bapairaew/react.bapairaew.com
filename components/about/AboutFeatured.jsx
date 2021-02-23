@@ -47,7 +47,7 @@ export default function AboutFeatured({ projects, posts, photos }) {
       <Box my={4}>
         <Flex id="projects" variant="layout.text" mb={4}>
           <Box sx={{ flex: "1 1 auto" }}>
-            <Heading as="h2" sx={{ fontWeight: "display" }}>
+            <Heading as="h2" variant="display">
               Projects
             </Heading>
           </Box>
@@ -82,7 +82,7 @@ export default function AboutFeatured({ projects, posts, photos }) {
           as="h2"
           variant="layout.text"
           mb={4}
-          sx={{ fontWeight: "display" }}
+          variant="display"
         >
           Tools
         </Heading>
@@ -112,10 +112,10 @@ export default function AboutFeatured({ projects, posts, photos }) {
             >
               <Heading
                 as="h3"
+                variant="display"
                 sx={{
                   fontSize: 2,
                   textAlign: "center",
-                  fontWeight: "display",
                 }}
               >
                 {t.text}
@@ -131,7 +131,7 @@ export default function AboutFeatured({ projects, posts, photos }) {
       <Box my={4}>
         <Flex id="posts" variant="layout.text" mb={4}>
           <Box sx={{ flex: "1 1 auto" }}>
-            <Heading as="h2" sx={{ fontWeight: "display" }}>
+            <Heading as="h2" variant="display">
               Posts
             </Heading>
           </Box>
@@ -164,7 +164,7 @@ export default function AboutFeatured({ projects, posts, photos }) {
       <Box my={4}>
         <Flex id="photos" variant="layout.text" mb={4}>
           <Box sx={{ flex: "1 1 auto" }}>
-            <Heading as="h2" sx={{ fontWeight: "display" }}>
+            <Heading as="h2" variant="display">
               Photography
             </Heading>
           </Box>

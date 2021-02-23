@@ -8,8 +8,8 @@ export default function ProjectCard({ project, titleAs = "h3" }) {
         <Card>
           <Heading
             as={titleAs}
+            variant="display"
             sx={{
-              fontWeight: "display",
               overflow: "hidden",
               textOverflow: "ellipsis",
               whiteSpace: "nowrap",
@@ -21,7 +21,7 @@ export default function ProjectCard({ project, titleAs = "h3" }) {
           <Text
             as="p"
             mt={1}
-            color="gray"
+            variant="subtitle"
             sx={{
               overflow: "hidden",
               textOverflow: "ellipsis",

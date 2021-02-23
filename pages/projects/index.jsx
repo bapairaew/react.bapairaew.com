@@ -28,7 +28,7 @@ export default function Projects({ projects }) {
       />
       <Header />
       <Container>
-        <Heading as="h1" sx={{ fontWeight: "display" }}>
+        <Heading as="h1" variant="display">
           Projects
         </Heading>
         <Divider />

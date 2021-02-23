@@ -28,7 +28,7 @@ export default function NotFound() {
             textAlign: "center",
           }}
         >
-          <Heading as="h1" sx={{ fontWeight: "display" }}>
+          <Heading as="h1" variant="display">
             Page not found
           </Heading>
           <Text as="p" my={3}>

@@ -28,7 +28,7 @@ export default function Posts({ posts }) {
       />
       <Header />
       <Container variant="layout.text">
-        <Heading as="h1" sx={{ fontWeight: "display" }}>
+        <Heading as="h1" variant="display">
           Posts
         </Heading>
         <Divider />

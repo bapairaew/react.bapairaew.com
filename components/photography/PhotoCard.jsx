@@ -13,8 +13,8 @@ import Link from "next/link";
 export default function PhotoCard({ photo, titleAs = "h3" }) {
   return (
     <Link href={`/photography/${photo.slug}`} passHref>
-      <A sx={{ width: "100%" }}>
-        <Card variant="compact">
+      <A sx={{ width: "100%", height: "100%" }}>
+        <Card variant="compact" sx={{ height: "100%" }}>
           <Flex sx={{ flexDirection: "column", justifyContent: "center" }}>
             <AspectRatio
               ratio={4 / 3}

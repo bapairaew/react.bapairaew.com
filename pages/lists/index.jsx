@@ -31,7 +31,7 @@ export default function Lists() {
       />
       <Header />
       <Container variant="layout.text">
-        <Heading as="h1" sx={{ fontWeight: "display" }}>
+        <Heading as="h1" variant="display">
           Lists
         </Heading>
         <Divider />

@@ -51,7 +51,7 @@ export default function ProjectLayout({ children, frontMatter }) {
         <Text as="p" my={3} variant="subtitle">
           {[project.year, tagsMap.Company?.[0]].filter((x) => x).join(" · ")}
         </Text>
-        <Heading as="h1" sx={{ fontWeight: "display" }}>
+        <Heading as="h1" variant="display">
           {project.title}
         </Heading>
         <Text as="p" my={3} sx={{ fontSize: 3 }}>

@@ -45,12 +45,12 @@ export default function Music({ tracks, artists }) {
             <Text>← Lists</Text>
           </A>
         </Link>
-        <Heading as="h1" sx={{ fontWeight: "display" }} mb={3}>
+        <Heading as="h1" variant="display" mb={3}>
           Music
         </Heading>
         <Divider />
         <Box my={4}>
-          <Heading as="h2" sx={{ fontWeight: "display" }} mb={3}>
+          <Heading as="h2" variant="display" mb={3}>
             Artists
           </Heading>
           <Grid
@@ -72,7 +72,7 @@ export default function Music({ tracks, artists }) {
         </Box>
         <Divider />
         <Box my={4}>
-          <Heading as="h2" sx={{ fontWeight: "display" }} mb={3}>
+          <Heading as="h2" variant="display" mb={3}>
             Tracks
           </Heading>
           <Grid
