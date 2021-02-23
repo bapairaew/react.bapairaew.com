@@ -44,6 +44,7 @@ export default function AboutFeatured({ projects, posts, photos }) {
 
   return (
     <Container>
+      <Divider />
       <Box my={4}>
         <Flex id="projects" variant="layout.text" mb={4}>
           <Box sx={{ flex: "1 1 auto" }}>
@@ -77,15 +78,11 @@ export default function AboutFeatured({ projects, posts, photos }) {
       </Box>
       <Divider />
       <Box my={4}>
-        <Heading
-          id="tools"
-          as="h2"
-          variant="layout.text"
-          mb={4}
-          variant="display"
-        >
-          Tools
-        </Heading>
+        <Box variant="layout.text">
+          <Heading id="tools" as="h2" mb={4} variant="display">
+            Tools
+          </Heading>
+        </Box>
         <Grid
           as="ul"
           p={0}
@@ -141,19 +138,13 @@ export default function AboutFeatured({ projects, posts, photos }) {
             </Link>
           </Box>
         </Flex>
-        <Grid
-          as="ul"
-          p={0}
-          gap={2}
-          columns={["1fr", "1fr 1fr", "1fr 1fr"]}
-          sx={{ alignContent: "center" }}
-        >
+        <Box variant="layout.text">
           {featuredPosts?.map((post) => (
             <Box key={post.slug} as="li" sx={{ listStyleType: "none" }}>
               <PostCard titleAs="h3" post={post} />
             </Box>
           ))}
-        </Grid>
+        </Box>
         <Box p={4} sx={{ display: ["block", "none"], textAlign: "center" }}>
           <Link href="/posts" passHref>
             <A>All posts →</A>
