@@ -121,12 +121,12 @@ export const parsePhoto = (photo) => {
       photo.exif.DateTimeOriginal?.toJSON() ||
       photo.exif.CreateDate?.toJSON() ||
       null,
-    camera: photo.exif.Model ? [photo.exif.Model] : null,
+    camera: photo.exif.Model ? photo.exif.Model : null,
     fnumber: photo.exif.FNumber,
     iso: photo.exif.ISO,
     focalLength: photo.exif.FocalLength,
     exposureTime: photo.exif.ExposureTime,
-    width: photo.exif.ExifImageWidth,
-    height: photo.exif.ExifImageHeight,
+    width: photo.exif.ExifImageWidth, // Does not provide correct dimension
+    height: photo.exif.ExifImageHeight, // Does not provide correct dimension
   };
 };

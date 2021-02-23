@@ -16,6 +16,7 @@
     "exifr": "^6.0.0",
     "globby": "^11.0.2",
     "gray-matter": "^4.0.2",
+    "image-size": "^0.9.3",
     "next": "10.0.6",
     "next-mdx-enhanced": "^5.0.0",
     "next-seo": "^4.19.0",

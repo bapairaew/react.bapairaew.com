@@ -1,5 +1,6 @@
 import exifr from "exifr";
 import fs from "fs";
+import * as sizeOf from "image-size";
 import { NextSeo } from "next-seo";
 import Image from "next/image";
 import Link from "next/link";
@@ -30,16 +31,17 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params: { slug } }) => {
   const path = `public/photos/${slug}.jpeg`;
+  const size = sizeOf(path);
   const photo = parsePhoto({
     path,
     exif: await promisify(fs.readFile)(path).then(exifr.parse),
   });
   return {
-    props: { photo },
+    props: { photo, size },
   };
 };
 
-export default function SinglePhotography({ photo }) {
+export default function SinglePhotography({ photo, size }) {
   const title = `${photo.place} | Narudom`;
   const description = [
     photo.place,
@@ -69,9 +71,9 @@ export default function SinglePhotography({ photo }) {
           </A>
         </Link>
         <Flex sx={{ flexDirection: ["column", "row"] }}>
-          <Box sx={{ flexBasis: ["auto", 800] }}>
+          <Box sx={{ flexBasis: ["auto", 600, 800] }}>
             <AspectRatio
-              ratio={photo.width / photo.height}
+              ratio={size.width / size.height}
               sx={{
                 display: "flex",
                 alignItems: "center",
