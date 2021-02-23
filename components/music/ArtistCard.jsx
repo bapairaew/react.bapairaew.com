@@ -1,46 +1,51 @@
 import Image from "next/image";
-import { AspectRatio, Box, Flex, Heading } from "theme-ui";
+import { AspectRatio, Box, Card, Flex, Heading, Link } from "theme-ui";
 
 export default function ArtistCard({ artist, titleAs = "h3" }) {
   return (
-    <Flex
-      sx={{
-        flexDirection: "column",
-        justifyContent: "center",
-        textDecoration: "none",
-        color: "text",
-      }}
-      as="a"
+    <Link
       href={artist.external_urls.spotify}
       target="_blank"
       rel="noopener noreferrer"
+      sx={{ textDecoration: "none" }}
     >
-      <AspectRatio
-        ratio={1 / 1}
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          borderRadius: "50%",
-          overflow: "hidden",
-        }}
-      >
-        <Image
-          layout="fill"
-          objectFit="cover"
-          src={artist.images[0].url}
-          alt={artist.name}
-        />
-      </AspectRatio>
-      <Box my={1}>
-        <Heading
-          as={titleAs}
-          sx={{ textAlign: "center", fontSize: 2, fontWeight: "body" }}
-          my={2}
+      <Card sx={{ height: "100%" }}>
+        <Flex
+          sx={{
+            flexDirection: "column",
+            justifyContent: "center",
+            textDecoration: "none",
+            color: "text",
+          }}
         >
-          {artist.name}
-        </Heading>
-      </Box>
-    </Flex>
+          <AspectRatio
+            ratio={1 / 1}
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              borderRadius: "full",
+              overflow: "hidden",
+            }}
+          >
+            <Image
+              layout="fill"
+              objectFit="cover"
+              src={artist.images[0].url}
+              alt={artist.name}
+            />
+          </AspectRatio>
+          <Box my={2}>
+            <Heading
+              as={titleAs}
+              sx={{ textAlign: "center", fontSize: 2, fontWeight: "body" }}
+              my={2}
+            >
+              {artist.name}
+            </Heading>
+          </Box>
+        </Flex>
+      </Card>
+    </Link>
   );
 }
