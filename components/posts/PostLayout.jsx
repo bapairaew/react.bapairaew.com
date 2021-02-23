@@ -31,9 +31,9 @@ export default function PostLayout({ children, frontMatter }) {
         }}
       />
       <Container variant="layout.text">
-        <Link href="/photography" passHref>
+        <Link href="/posts" passHref>
           <A sx={{ mb: 4, color: "gray" }}>
-            <Text>← Back</Text>
+            <Text>← Posts</Text>
           </A>
         </Link>
         <Heading as="h1" sx={{ fontWeight: "display" }}>

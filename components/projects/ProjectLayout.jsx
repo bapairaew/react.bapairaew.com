@@ -45,7 +45,7 @@ export default function ProjectLayout({ children, frontMatter }) {
       <Container variant="layout.text">
         <Link href="/projects" passHref>
           <A sx={{ mb: 4, color: "gray" }}>
-            <Text>← Back</Text>
+            <Text>← Projects</Text>
           </A>
         </Link>
         <Text as="p" my={3} variant="subtitle">

@@ -67,7 +67,7 @@ export default function SinglePhotography({ photo, size }) {
       <Container>
         <Link href="/photography" passHref>
           <A sx={{ mb: 4, color: "gray" }}>
-            <Text>← Back</Text>
+            <Text>← Photography</Text>
           </A>
         </Link>
         <Flex sx={{ flexDirection: ["column", "row"] }}>

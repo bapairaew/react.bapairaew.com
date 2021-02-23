@@ -42,7 +42,7 @@ export default function Music({ tracks, artists }) {
       <Container>
         <Link href="/lists" passHref>
           <A sx={{ mb: 4, color: "gray" }}>
-            <Text>← Back</Text>
+            <Text>← Lists</Text>
           </A>
         </Link>
         <Heading as="h1" sx={{ fontWeight: "display" }} mb={3}>

@@ -53,7 +53,7 @@ export default function AboutFeatured({ projects, posts, photos }) {
           </Box>
           <Box sx={{ display: ["none", "block"] }}>
             <Link href="/projects" passHref>
-              <A>See all →</A>
+              <A>All projects →</A>
             </Link>
           </Box>
         </Flex>
@@ -71,7 +71,7 @@ export default function AboutFeatured({ projects, posts, photos }) {
         </Grid>
         <Box p={4} sx={{ display: ["block", "none"], textAlign: "center" }}>
           <Link href="/projects" passHref>
-            <A>See all →</A>
+            <A>All projects →</A>
           </Link>
         </Box>
       </Box>
@@ -137,7 +137,7 @@ export default function AboutFeatured({ projects, posts, photos }) {
           </Box>
           <Box sx={{ display: ["none", "block"] }}>
             <Link href="/posts" passHref>
-              <A>See all →</A>
+              <A>All posts →</A>
             </Link>
           </Box>
         </Flex>
@@ -156,7 +156,7 @@ export default function AboutFeatured({ projects, posts, photos }) {
         </Grid>
         <Box p={4} sx={{ display: ["block", "none"], textAlign: "center" }}>
           <Link href="/posts" passHref>
-            <A>See all →</A>
+            <A>All posts →</A>
           </Link>
         </Box>
       </Box>
@@ -170,7 +170,7 @@ export default function AboutFeatured({ projects, posts, photos }) {
           </Box>
           <Box sx={{ display: ["none", "block"] }}>
             <Link href="/photography" passHref>
-              <A>See all →</A>
+              <A>All photos →</A>
             </Link>
           </Box>
         </Flex>
@@ -187,7 +187,7 @@ export default function AboutFeatured({ projects, posts, photos }) {
         </Grid>
         <Box p={4} sx={{ display: ["block", "none"], textAlign: "center" }}>
           <Link href="/photography" passHref>
-            <A>See all →</A>
+            <A>All photos →</A>
           </Link>
         </Box>
       </Box>
