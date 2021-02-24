@@ -21,7 +21,7 @@ export const getStaticProps = async () => {
   const { items: artists } = await getTopArtists();
   return {
     props: { tracks, artists },
-    revalidate: 24 * 60 * 60, // Update once a day max
+    revalidate: 60 * 60, // Update every hour
   };
 };
 

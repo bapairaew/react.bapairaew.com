@@ -30,6 +30,7 @@ export const getTopTracks = async () => {
 
   return fetch(
     `https://api.spotify.com/v1/me/top/tracks?${querystring.stringify({
+      time_range: "short_term",
       limit: 40,
     })}`,
     {
@@ -45,6 +46,7 @@ export const getTopArtists = async () => {
 
   return fetch(
     `https://api.spotify.com/v1/me/top/artists?${querystring.stringify({
+      time_range: "short_term",
       limit: 9,
     })}`,
     {
