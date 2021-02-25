@@ -38,7 +38,7 @@ export default function ArtistCard({ artist, titleAs = "h3" }) {
           <Box my={2}>
             <Heading
               as={titleAs}
-              sx={{ textAlign: "center", fontSize: 2, fontWeight: "body" }}
+              sx={{ textAlign: "center", fontSize: 1, fontWeight: "body" }}
               my={2}
             >
               {artist.name}

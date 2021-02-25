@@ -20,12 +20,12 @@ export const getStaticProps = async () => {
   const { items: tracks } = await getTopTracks();
   const { items: artists } = await getTopArtists();
   return {
-    props: { tracks, artists },
+    props: { tracks, artists, lastUpdated: new Date().toJSON() },
     revalidate: 60 * 60, // Update every hour
   };
 };
 
-export default function Music({ tracks, artists }) {
+export default function Music({ tracks, artists, lastUpdated }) {
   return (
     <>
       <NextSeo
@@ -48,6 +48,19 @@ export default function Music({ tracks, artists }) {
         <Heading as="h1" variant="display" mb={3}>
           Music
         </Heading>
+        <Text
+          as="p"
+          variant="subtitle"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          From{" "}
+          <A href="https://www.spotify.com/">
+            <u>Spotify</u>
+          </A>{" "}
+          on {new Date(lastUpdated).toLocaleDateString()}{" "}
+          {new Date(lastUpdated).toLocaleTimeString()}
+        </Text>
         <Divider />
         <Box my={4}>
           <Heading as="h2" variant="display" mb={3}>
