@@ -140,7 +140,7 @@ export default function AboutFeatured({ projects, posts, photos }) {
         </Flex>
         <Box variant="layout.text">
           {featuredPosts?.map((post) => (
-            <Box key={post.slug} as="li" sx={{ listStyleType: "none" }}>
+            <Box key={post.slug} mb={3} as="li" sx={{ listStyleType: "none" }}>
               <PostCard titleAs="h3" post={post} />
             </Box>
           ))}

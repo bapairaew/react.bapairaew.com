@@ -107,8 +107,8 @@ export const parsePost = (post) => {
     title: post.data.title,
     description: post.data.description,
     keywords: post.data.keywords,
-    publishedTime: post.data.publishedTime?.toJSON(),
-    modifiedTime: post.data.modifiedTime?.toJSON(),
+    publishedTime: post.data.publishedTime?.toJSON() || null,
+    modifiedTime: post.data.modifiedTime?.toJSON() || null,
   };
 };
 
