@@ -54,9 +54,9 @@ export default function Music({ tracks, artists, lastUpdated }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          From{" "}
-          <A href="https://www.spotify.com/">
-            <u>Spotify</u>
+          Automatically curated by{" "}
+          <A href="https://developer.spotify.com/">
+            <u>Spotify API ↗</u>
           </A>{" "}
           on {new Date(lastUpdated).toLocaleDateString()}{" "}
           {new Date(lastUpdated).toLocaleTimeString()}
