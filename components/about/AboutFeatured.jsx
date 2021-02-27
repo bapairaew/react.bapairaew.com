@@ -32,7 +32,7 @@ export default function AboutFeatured({ projects, posts, photos }) {
 
   const featuredProjects = projects
     ?.sort((a, b) => b.slug.localeCompare(a.slug))
-    .slice(0, 8);
+    .slice(0, 12);
 
   const featuredPosts = posts
     ?.sort((a, b) => b.slug.localeCompare(a.slug))
