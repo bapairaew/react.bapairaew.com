@@ -85,10 +85,6 @@ const theme = {
     },
   },
   styles: {
-    Container: {
-      p: 3,
-      maxWidth: 1024,
-    },
     root: {
       fontFamily: "body",
       lineHeight: "body",
