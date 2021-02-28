@@ -4,13 +4,13 @@ import Link from "next/link";
 import { AspectRatio, Grid, Link as A, Text } from "theme-ui";
 
 // https://github.com/leerob/leerob.io/blob/main/components/MDXComponents.js
-const CustomLink = ({ children, ...props }) => {
+const MdxLink = ({ children, ...props }) => {
   const href = props.href;
   const isInternalLink = href && (href.startsWith("/") || href.startsWith("#"));
 
   if (isInternalLink) {
     return (
-      <Link href={href}>
+      <Link href={href} passHref>
         <a {...props}>{children}</a>
       </Link>
     );
@@ -23,7 +23,7 @@ const CustomLink = ({ children, ...props }) => {
   );
 };
 
-const CustomImage = ({ src, alt }) => {
+const MdxImage = ({ src, alt }) => {
   return (
     <>
       <AspectRatio
@@ -47,8 +47,8 @@ const CustomImage = ({ src, alt }) => {
 const components = {
   pre: ({ children }) => <>{children}</>,
   code: Prism,
-  a: CustomLink,
-  img: CustomImage,
+  a: MdxLink,
+  img: MdxImage,
   Grid,
 };
 

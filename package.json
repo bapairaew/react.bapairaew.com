@@ -7,15 +7,10 @@
     "start": "next start"
   },
   "dependencies": {
-    "@next/mdx": "^10.0.6",
     "@theme-ui/prism": "^0.3.5",
     "chrome-aws-lambda": "^7.0.0",
-    "exifr": "^6.0.0",
-    "globby": "^11.0.2",
-    "gray-matter": "^4.0.2",
     "image-size": "^0.9.3",
     "next": "10.0.6",
-    "next-mdx-enhanced": "^5.0.0",
     "next-seo": "^4.19.0",
     "puppeteer-core": "^7.1.0",
     "react": "17.0.1",
@@ -25,6 +20,11 @@
     "theme-ui": "^0.3.5"
   },
   "devDependencies": {
+    "@next/mdx": "^10.0.6",
+    "exifr": "^6.0.0",
+    "globby": "^11.0.2",
+    "gray-matter": "^4.0.2",
+    "next-mdx-enhanced": "^5.0.0",
     "prettier": "2.2.1"
   }
 }
