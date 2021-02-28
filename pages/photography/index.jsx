@@ -32,12 +32,7 @@ export default function Photography({ photos }) {
           Photography
         </Heading>
         <Divider />
-        <Grid
-          as="ul"
-          p={0}
-          mt={4}
-          columns={["1fr", "1fr 1fr 1fr 1fr", "1fr 1fr 1fr 1fr"]}
-        >
+        <Grid as="ul" p={0} mt={4} columns={["1fr", "1fr 1fr", "1fr 1fr 1fr"]}>
           {photos
             .sort((a, b) => b.slug.localeCompare(a.slug))
             .map((photo) => (

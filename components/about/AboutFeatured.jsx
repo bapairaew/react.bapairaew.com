@@ -165,11 +165,7 @@ export default function AboutFeatured({ projects, posts, photos }) {
             </Link>
           </Box>
         </Flex>
-        <Grid
-          as="ul"
-          p={0}
-          columns={["1fr 1fr", "1fr 1fr 1fr 1fr", "1fr 1fr 1fr 1fr"]}
-        >
+        <Grid as="ul" p={0} columns={["1fr 1fr", "1fr 1fr", "1fr 1fr 1fr 1fr"]}>
           {featuredPhotos?.map((photo) => (
             <Box key={photo.slug} as="li" sx={{ listStyleType: "none" }}>
               <PhotoCard titleAs="h3" photo={photo} />
