@@ -10,6 +10,7 @@
   "dependencies": {
     "@theme-ui/prism": "^0.3.5",
     "chrome-aws-lambda": "^7.0.0",
+    "dateformat": "^4.5.1",
     "image-size": "^0.9.3",
     "next": "10.0.6",
     "next-seo": "^4.19.0",

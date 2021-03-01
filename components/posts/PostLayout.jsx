@@ -1,6 +1,7 @@
+import dateformat from "dateformat";
 import { NextSeo } from "next-seo";
 import Link from "next/link";
-import { Container, Heading, Text, NavLink as A } from "theme-ui";
+import { Container, Heading, NavLink as A, Text } from "theme-ui";
 import Footer from "~/components/common/Footer";
 import Header from "~/components/common/Header";
 import { getOgImgeUrlObject } from "~/libs/image";
@@ -41,12 +42,7 @@ export default function PostLayout({ children, frontMatter }) {
         </Heading>
         <Text as="p" my={3} variant="subtitle">
           {[
-            new Date(post.publishedTime).toLocaleDateString(undefined, {
-              weekday: "long",
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            }),
+            dateformat(new Date(post.publishedTime), "dd mmm yyyy"),
             post.keywords,
           ]
             .filter((x) => x)

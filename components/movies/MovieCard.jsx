@@ -1,3 +1,4 @@
+import dateformat from "dateformat";
 import Image from "next/image";
 import { AspectRatio, Box, Card, Flex, Heading, Link, Text } from "theme-ui";
 
@@ -46,7 +47,10 @@ export default function MoiveCard({ movie, titleAs = "h3" }) {
               {movie.title}
             </Heading>
             <Text as="p" variant="subtitle">
-              {[`${movie.rating} ★`, new Date(movie.added).toLocaleDateString()]
+              {[
+                `${movie.rating} ★`,
+                dateformat(new Date(movie.added), "dd mmm yyyy"),
+              ]
                 .filter((x) => x)
                 .join(" · ")}
             </Text>

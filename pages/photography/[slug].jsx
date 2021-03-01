@@ -1,3 +1,4 @@
+import dateformat from "dateformat";
 import exifr from "exifr";
 import fs from "fs";
 import * as sizeOf from "image-size";
@@ -45,7 +46,7 @@ export default function SinglePhotography({ photo, size }) {
   const title = `${photo.place} | Narudom`;
   const description = [
     photo.place,
-    photo.date && new Date(photo.date).toLocaleDateString(),
+    dateformat(new Date(photo.date), "dd mmm yyyy"),
     photo.camera,
   ]
     .filter((x) => x)
@@ -98,7 +99,7 @@ export default function SinglePhotography({ photo, size }) {
                   Date
                 </Text>
                 <Text as="dd">
-                  {photo.date && new Date(photo.date).toLocaleDateString()}
+                  {dateformat(new Date(photo.date), "dd mmm yyyy")}
                 </Text>
               </Box>
               <Box>

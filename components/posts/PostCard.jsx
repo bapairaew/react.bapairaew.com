@@ -1,3 +1,4 @@
+import dateformat from "dateformat";
 import Link from "next/link";
 import { Card, Flex, Heading, NavLink as A, Text } from "theme-ui";
 
@@ -15,7 +16,7 @@ export default function PostCard({ post, titleAs = "h3" }) {
           <Flex sx={{ justifyContent: "space-between", alignItems: "center" }}>
             {post.publishedTime && (
               <Text as="p" my={3} variant="subtitle">
-                {new Date(post.publishedTime).toLocaleDateString()}
+                {dateformat(new Date(post.publishedTime), "dd mmm yyyy")}
               </Text>
             )}
             <Text variant="subtitle" sx={{ textDecoration: "underline" }}>

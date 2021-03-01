@@ -1,3 +1,4 @@
+import dateformat from "dateformat";
 import { NextSeo } from "next-seo";
 import Link from "next/link";
 import {
@@ -57,8 +58,7 @@ export default function Movies({ movies, lastUpdated }) {
           <A href="https://www.imdb.com/user/ur129926199/watchlist">
             IMDB Watchlist ↗
           </A>{" "}
-          on {new Date(lastUpdated).toLocaleDateString()}{" "}
-          {new Date(lastUpdated).toLocaleTimeString()}
+          on {dateformat(new Date(lastUpdated), "dd mmm yyyy HH:MM")}
         </Text>
         <Divider />
         <Grid

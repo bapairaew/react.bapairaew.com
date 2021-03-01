@@ -1,3 +1,4 @@
+import dateformat from "dateformat";
 import { NextSeo } from "next-seo";
 import Link from "next/link";
 import {
@@ -57,8 +58,7 @@ export default function Music({ tracks, artists, lastUpdated }) {
         >
           Automatically curated by{" "}
           <A href="https://developer.spotify.com/">Spotify API ↗</A> on{" "}
-          {new Date(lastUpdated).toLocaleDateString()}{" "}
-          {new Date(lastUpdated).toLocaleTimeString()}
+          {dateformat(new Date(lastUpdated), "dd mmm yyyy HH:MM")}
         </Text>
         <Divider />
         <Box my={4}>
