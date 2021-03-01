@@ -9,7 +9,7 @@ export default function TrackCard({ track, titleAs = "h3" }) {
       rel="noopener noreferrer"
       sx={{ textDecoration: "none" }}
     >
-      <Card sx={{ height: "100%" }}>
+      <Card variant="compact" sx={{ height: "100%" }}>
         <Flex
           sx={{
             flexDirection: "column",

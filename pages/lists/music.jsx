@@ -6,7 +6,8 @@ import {
   Divider,
   Grid,
   Heading,
-  NavLink as A,
+  Link as A,
+  NavLink,
   Text,
 } from "theme-ui";
 import Footer from "~/components/common/Footer";
@@ -30,10 +31,10 @@ export default function Music({ tracks, artists, lastUpdated }) {
     <>
       <NextSeo
         title="Music | Narudom"
-        description="An engineer's Top listened music from Spotify"
+        description="An engineer's top listened music from Spotify"
         openGraph={{
           title: "Music | Narudom",
-          description: "An engineer's Top listened music from Spotify",
+          description: "An engineer's top listened music from Spotify",
           images: getOgImgeUrlObject("Music"),
           site_name: "Narudom",
         }}
@@ -41,9 +42,9 @@ export default function Music({ tracks, artists, lastUpdated }) {
       <Header />
       <Container>
         <Link href="/lists" passHref>
-          <A sx={{ mb: 4, color: "gray" }}>
+          <NavLink sx={{ mb: 4, color: "gray" }}>
             <Text>← Lists</Text>
-          </A>
+          </NavLink>
         </Link>
         <Heading as="h1" variant="display" mb={3}>
           Music
@@ -55,10 +56,8 @@ export default function Music({ tracks, artists, lastUpdated }) {
           rel="noopener noreferrer"
         >
           Automatically curated by{" "}
-          <A href="https://developer.spotify.com/">
-            <u>Spotify API ↗</u>
-          </A>{" "}
-          on {new Date(lastUpdated).toLocaleDateString()}{" "}
+          <A href="https://developer.spotify.com/">Spotify API ↗</A> on{" "}
+          {new Date(lastUpdated).toLocaleDateString()}{" "}
           {new Date(lastUpdated).toLocaleTimeString()}
         </Text>
         <Divider />

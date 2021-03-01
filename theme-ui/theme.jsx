@@ -254,6 +254,17 @@ const theme = {
       borderColor: "text",
     },
     compact: {
+      p: 2,
+      borderRadius: "small",
+      backgroundColor: "background",
+      borderTopWidth: 1,
+      borderLeft: 1,
+      borderRight: 1,
+      borderBottom: 4,
+      borderStyle: "solid",
+      borderColor: "text",
+    },
+    bare: {
       borderRadius: "small",
       backgroundColor: "background",
       borderTopWidth: 1,
