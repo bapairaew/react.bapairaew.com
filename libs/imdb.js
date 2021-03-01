@@ -1,8 +1,6 @@
 import querystring from "querystring";
 
-const { IMDB_COOKIE: cookie } = process.env;
-
-export const getMovies = (filter) => {
+export const getMovies = () => {
   return fetch(
     `https://www.imdb.com/list/ls089230524/search?${querystring.stringify({
       sort: "date_added,desc",
@@ -10,12 +8,7 @@ export const getMovies = (filter) => {
       pageId: "ls089230524",
       pageType: "list",
       subpageType: "watchlist",
-    })}`,
-    {
-      headers: {
-        cookie,
-      },
-    }
+    })}`
   )
     .then((r) => r.json())
     .then((data) =>
