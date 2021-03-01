@@ -29,6 +29,7 @@ export const getMovies = (filter) => {
           encodeURIComponent("._UX384_CR0,0,384,568_AL_.") // 384 x 568
         ),
         rating: data.starbars[item.const].rating,
+        added: new Date(item.added).toJSON(),
       }))
     );
 };

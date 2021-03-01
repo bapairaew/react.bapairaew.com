@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { AspectRatio, Box, Card, Flex, Heading, Text, Link } from "theme-ui";
+import { AspectRatio, Box, Card, Flex, Heading, Link, Text } from "theme-ui";
 
 export default function MoiveCard({ movie, titleAs = "h3" }) {
   return (
@@ -46,7 +46,9 @@ export default function MoiveCard({ movie, titleAs = "h3" }) {
               {movie.title}
             </Heading>
             <Text as="p" variant="subtitle">
-              {movie.rating} ★
+              {[`${movie.rating} ★`, new Date(movie.added).toLocaleDateString()]
+                .filter((x) => x)
+                .join(" · ")}
             </Text>
           </Box>
         </Flex>
