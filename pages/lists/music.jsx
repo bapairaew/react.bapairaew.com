@@ -57,8 +57,14 @@ export default function Music({ tracks, artists, lastUpdated }) {
           rel="noopener noreferrer"
         >
           Automatically curated by{" "}
-          <A href="https://developer.spotify.com/">Spotify API ↗</A> on{" "}
-          {dateformat(new Date(lastUpdated), "dd mmm yyyy HH:MM")}
+          <A
+            href="https://developer.spotify.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Spotify API ↗
+          </A>{" "}
+          on {dateformat(new Date(lastUpdated), "dd mmm yyyy HH:MM")}
         </Text>
         <Divider />
         <Box my={4}>

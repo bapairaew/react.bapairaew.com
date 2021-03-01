@@ -55,7 +55,11 @@ export default function Movies({ movies, lastUpdated }) {
           rel="noopener noreferrer"
         >
           Automatically scraped from{" "}
-          <A href="https://www.imdb.com/user/ur129926199/watchlist">
+          <A
+            href="https://www.imdb.com/user/ur129926199/watchlist"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             IMDB Watchlist ↗
           </A>{" "}
           on {dateformat(new Date(lastUpdated), "dd mmm yyyy HH:MM")}
