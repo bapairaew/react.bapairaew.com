@@ -4,6 +4,7 @@ module.exports = require("next-mdx-enhanced")({
   images: {
     domains: [
       "i.scdn.co", // Spotify Album Art
+      "m.media-amazon.com", // IMDB movie poster
     ],
   },
 });

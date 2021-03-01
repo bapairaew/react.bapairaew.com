@@ -14,7 +14,10 @@ import Footer from "~/components/common/Footer";
 import Header from "~/components/common/Header";
 import { getOgImgeUrlObject } from "~/libs/image";
 
-const lists = [{ title: "Music", href: "/lists/music" }];
+const lists = [
+  { title: "Music", href: "/lists/music" },
+  { title: "Movies", href: "/lists/movies" },
+];
 
 export default function Lists() {
   return (
