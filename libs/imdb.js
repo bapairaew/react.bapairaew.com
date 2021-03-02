@@ -10,9 +10,12 @@ export const getMovies = () => {
       pageId: "ls089230524",
       pageType: "list",
       subpageType: "watchlist",
+      tracking_tag: "",
     })}`,
     {
       headers: {
+        // NOTE: this is make IMDB returns English title instead romanization of the original title
+        "accept-language": "en",
         // NOTE: cookie is needed to get personal rating
         cookie,
       },
