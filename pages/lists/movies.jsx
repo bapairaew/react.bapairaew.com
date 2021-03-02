@@ -30,10 +30,10 @@ export default function Movies({ movies, lastUpdated }) {
     <>
       <NextSeo
         title="Movies | Narudom"
-        description="An engineer's top watched movies from IMDB"
+        description="An engineer's top watched movies from IMDB."
         openGraph={{
           title: "Movies | Narudom",
-          description: "An engineer's top watched movies from IMDB",
+          description: "An engineer's top watched movies from IMDB.",
           images: getOgImgeUrlObject("Movies"),
           site_name: "Narudom",
         }}

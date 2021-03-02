@@ -32,10 +32,10 @@ export default function Music({ tracks, artists, lastUpdated }) {
     <>
       <NextSeo
         title="Music | Narudom"
-        description="An engineer's top listened music from Spotify"
+        description="An engineer's top listened music from Spotify."
         openGraph={{
           title: "Music | Narudom",
-          description: "An engineer's top listened music from Spotify",
+          description: "An engineer's top listened music from Spotify.",
           images: getOgImgeUrlObject("Music"),
           site_name: "Narudom",
         }}
