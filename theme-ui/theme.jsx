@@ -205,6 +205,15 @@ const theme = {
       fontSize: 1,
       color: "gray",
     },
+    cardTitle: {
+      fontSize: 2,
+      fontWeight: "body",
+      display: "-webkit-box",
+      "-webkit-line-clamp": "2",
+      "-webkit-box-orient": "vertical",
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+    },
   },
   layout: {
     container: {

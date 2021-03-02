@@ -17,6 +17,7 @@ import { getOgImgeUrlObject } from "~/libs/ogimage";
 const lists = [
   { title: "Music", href: "/lists/music" },
   { title: "Movies", href: "/lists/movies" },
+  { title: "Whiskies", href: "/lists/whiskies" },
 ];
 
 export default function Lists() {

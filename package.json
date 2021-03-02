@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@next/mdx": "^10.0.6",
+    "csvtojson": "^2.0.10",
     "exifr": "^6.0.0",
     "globby": "^11.0.2",
     "gray-matter": "^4.0.2",

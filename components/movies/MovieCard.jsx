@@ -37,13 +37,7 @@ export default function MoiveCard({ movie, titleAs = "h3" }) {
             />
           </AspectRatio>
           <Box my={2}>
-            <Heading
-              as={titleAs}
-              sx={{
-                fontSize: 2,
-                fontWeight: "body",
-              }}
-            >
+            <Heading as={titleAs} variant="cardTitle">
               {movie.title}
             </Heading>
             <Text as="p" variant="subtitle">

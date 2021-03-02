@@ -1,15 +1,16 @@
+import dateformat from "dateformat";
 import Image from "next/image";
-import { AspectRatio, Box, Card, Flex, Heading, Text, Link } from "theme-ui";
+import { AspectRatio, Box, Card, Flex, Heading, Link, Text } from "theme-ui";
 
-export default function TrackCard({ track, titleAs = "h3" }) {
+export default function WhiskyCard({ whisky, titleAs = "h3" }) {
   return (
     <Link
-      href={track.external_urls.spotify}
+      href={whisky.href}
       target="_blank"
       rel="noopener noreferrer"
       sx={{ textDecoration: "none" }}
     >
-      <Card variant="compact" sx={{ height: "100%" }}>
+      <Card sx={{ height: "100%" }}>
         <Flex
           sx={{
             flexDirection: "column",
@@ -19,7 +20,7 @@ export default function TrackCard({ track, titleAs = "h3" }) {
           }}
         >
           <AspectRatio
-            ratio={1 / 1}
+            ratio={1 / 2}
             sx={{
               display: "flex",
               alignItems: "center",
@@ -31,16 +32,21 @@ export default function TrackCard({ track, titleAs = "h3" }) {
             <Image
               layout="fill"
               objectFit="cover"
-              src={track.album.images[0].url}
-              alt={track.name}
+              src={whisky.photo}
+              alt={whisky.title}
             />
           </AspectRatio>
-          <Box my={2}>
+          <Box mb={1} mt={4}>
             <Heading as={titleAs} variant="cardTitle">
-              {track.name}
+              {whisky.title}
             </Heading>
             <Text as="p" variant="subtitle">
-              {track.artists.map((a) => a.name).join(", ")}
+              {[
+                `${whisky.rating} ★`,
+                dateformat(new Date(whisky.added), "dd mmm yyyy"),
+              ]
+                .filter((x) => x)
+                .join(" · ")}
             </Text>
           </Box>
         </Flex>

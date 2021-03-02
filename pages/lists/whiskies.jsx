@@ -13,28 +13,28 @@ import {
 } from "theme-ui";
 import Footer from "~/components/common/Footer";
 import Header from "~/components/common/Header";
-import MovieCard from "~/components/movies/MovieCard";
+import WhiskyCard from "~/components/whiskies/WhiskyCard";
 import { getOgImgeUrlObject } from "~/libs/ogimage";
-import { getMovies } from "~/libs/imdb";
+import { getWhiskies } from "~/libs/whiskybase";
 
 export const getStaticProps = async () => {
-  const movies = (await getMovies()) || [];
+  const whiskies = (await getWhiskies()) || [];
   return {
-    props: { movies, lastUpdated: new Date().toJSON() },
+    props: { whiskies, lastUpdated: new Date().toJSON() },
     revalidate: 60 * 60, // Update every hour
   };
 };
 
-export default function Movies({ movies, lastUpdated }) {
+export default function Whiskies({ whiskies, lastUpdated }) {
   return (
     <>
       <NextSeo
-        title="Movies | Narudom"
-        description="An engineer's top watched movies from IMDB."
+        title="Whiskies | Narudom"
+        description="A few of whiskies an engineer bought and drank."
         openGraph={{
-          title: "Movies | Narudom",
-          description: "An engineer's top watched movies from IMDB.",
-          images: getOgImgeUrlObject("Movies"),
+          title: "Whiskies | Narudom",
+          description: "A few of whiskies an engineer bought and drank.",
+          images: getOgImgeUrlObject("Whiskies"),
           site_name: "Narudom",
         }}
       />
@@ -46,7 +46,7 @@ export default function Movies({ movies, lastUpdated }) {
           </NavLink>
         </Link>
         <Heading as="h1" variant="display" mb={3}>
-          Movies
+          Whiskies
         </Heading>
         <Text
           as="p"
@@ -56,11 +56,11 @@ export default function Movies({ movies, lastUpdated }) {
         >
           Automatically scraped from{" "}
           <A
-            href="https://www.imdb.com/user/ur129926199/watchlist"
+            href="https://www.whiskybase.com/profile/bapairaew/lists"
             target="_blank"
             rel="noopener noreferrer"
           >
-            IMDB Watchlist ↗
+            Whiskybase ↗
           </A>{" "}
           on {dateformat(new Date(lastUpdated), "dd mmm yyyy HH:MM")}
         </Text>
@@ -69,11 +69,11 @@ export default function Movies({ movies, lastUpdated }) {
           as="ul"
           p={0}
           mt={4}
-          columns={["1fr 1fr", "1fr 1fr 1fr 1fr", "1fr 1fr 1fr 1fr 1fr 1fr"]}
+          columns={["1fr 1fr", "1fr 1fr 1fr", "1fr 1fr 1fr 1fr 1fr 1fr"]}
         >
-          {movies.map((movie) => (
-            <Box key={movie.id} as="li" sx={{ listStyleType: "none" }}>
-              <MovieCard titleAs="h2" movie={movie} />
+          {whiskies.map((whisky) => (
+            <Box key={whisky.id} as="li" sx={{ listStyleType: "none" }}>
+              <WhiskyCard titleAs="h3" whisky={whisky} />
             </Box>
           ))}
         </Grid>
