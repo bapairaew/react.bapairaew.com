@@ -40,7 +40,7 @@ export default function WhiskyCard({ whisky, titleAs = "h3" }) {
             <Heading as={titleAs} variant="cardTitle">
               {whisky.title}
             </Heading>
-            <Text as="p" variant="subtitle">
+            <Text mt={1} as="p" variant="subtitle">
               {[
                 `${whisky.rating} ★`,
                 dateformat(new Date(whisky.added), "dd mmm yyyy"),

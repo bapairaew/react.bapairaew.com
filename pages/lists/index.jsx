@@ -18,6 +18,7 @@ const lists = [
   { title: "Music", href: "/lists/music" },
   { title: "Movies", href: "/lists/movies" },
   { title: "Whiskies", href: "/lists/whiskies" },
+  { title: "Books", href: "/lists/books" },
 ];
 
 export default function Lists() {

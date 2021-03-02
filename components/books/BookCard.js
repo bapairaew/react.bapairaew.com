@@ -2,10 +2,10 @@ import dateformat from "dateformat";
 import Image from "next/image";
 import { AspectRatio, Box, Card, Flex, Heading, Link, Text } from "theme-ui";
 
-export default function MoiveCard({ movie, titleAs = "h3" }) {
+export default function BookCard({ book, titleAs = "h3" }) {
   return (
     <Link
-      href={movie.href}
+      href={book.href}
       target="_blank"
       rel="noopener noreferrer"
       sx={{ textDecoration: "none" }}
@@ -20,7 +20,7 @@ export default function MoiveCard({ movie, titleAs = "h3" }) {
           }}
         >
           <AspectRatio
-            ratio={96 / 142}
+            ratio={315 / 475}
             sx={{
               display: "flex",
               alignItems: "center",
@@ -32,18 +32,21 @@ export default function MoiveCard({ movie, titleAs = "h3" }) {
             <Image
               layout="fill"
               objectFit="cover"
-              src={movie.poster}
-              alt={movie.title}
+              src={book.cover}
+              alt={book.title}
             />
           </AspectRatio>
           <Box my={2}>
             <Heading as={titleAs} variant="cardTitle">
-              {movie.title}
+              {book.title}
             </Heading>
+            <Text as="p" variant="subtitle">
+              {book.author}
+            </Text>
             <Text mt={1} as="p" variant="subtitle">
               {[
-                `${movie.rating} ★`,
-                dateformat(new Date(movie.added), "dd mmm yyyy"),
+                `${book.rating} ★`,
+                dateformat(new Date(book.added), "dd mmm yyyy"),
               ]
                 .filter((x) => x)
                 .join(" · ")}
