@@ -36,7 +36,7 @@ export default function BookCard({ book, titleAs = "h3" }) {
               alt={book.title}
             />
           </AspectRatio>
-          <Box my={2}>
+          <Box mt={2}>
             <Heading as={titleAs} variant="cardTitle">
               {book.title}
             </Heading>

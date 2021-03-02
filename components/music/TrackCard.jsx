@@ -35,7 +35,7 @@ export default function TrackCard({ track, titleAs = "h3" }) {
               alt={track.name}
             />
           </AspectRatio>
-          <Box my={2}>
+          <Box mt={2}>
             <Heading as={titleAs} variant="cardTitle">
               {track.name}
             </Heading>

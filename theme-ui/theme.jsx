@@ -207,7 +207,7 @@ const theme = {
     },
     cardTitle: {
       fontSize: 2,
-      fontWeight: "body",
+      fontWeight: "title",
       display: "-webkit-box",
       WebkitLineClamp: "2",
       WebkitBoxOrient: "vertical",

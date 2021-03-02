@@ -36,7 +36,7 @@ export default function MoiveCard({ movie, titleAs = "h3" }) {
               alt={movie.title}
             />
           </AspectRatio>
-          <Box my={2}>
+          <Box mt={2}>
             <Heading as={titleAs} variant="cardTitle">
               {movie.title}
             </Heading>

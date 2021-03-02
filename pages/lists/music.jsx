@@ -76,9 +76,9 @@ export default function Music({ tracks, artists, lastUpdated }) {
             p={0}
             mt={4}
             columns={[
-              "1fr 1fr 1fr",
-              "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr",
-              "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr",
+              "1fr 1fr",
+              "1fr 1fr 1fr 1fr",
+              "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr",
             ]}
           >
             {artists.map((artist) => (

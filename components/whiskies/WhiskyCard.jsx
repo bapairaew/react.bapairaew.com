@@ -10,7 +10,7 @@ export default function WhiskyCard({ whisky, titleAs = "h3" }) {
       rel="noopener noreferrer"
       sx={{ textDecoration: "none" }}
     >
-      <Card sx={{ height: "100%" }}>
+      <Card variant="compact" sx={{ height: "100%" }}>
         <Flex
           sx={{
             flexDirection: "column",
@@ -22,6 +22,7 @@ export default function WhiskyCard({ whisky, titleAs = "h3" }) {
           <AspectRatio
             ratio={1 / 2}
             sx={{
+              m: 2,
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -36,7 +37,7 @@ export default function WhiskyCard({ whisky, titleAs = "h3" }) {
               alt={whisky.title}
             />
           </AspectRatio>
-          <Box mb={1} mt={4}>
+          <Box mt={4}>
             <Heading as={titleAs} variant="cardTitle">
               {whisky.title}
             </Heading>

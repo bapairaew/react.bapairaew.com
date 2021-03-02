@@ -35,12 +35,8 @@ export default function ArtistCard({ artist, titleAs = "h3" }) {
               alt={artist.name}
             />
           </AspectRatio>
-          <Box my={2}>
-            <Heading
-              as={titleAs}
-              sx={{ textAlign: "center", fontSize: 1, fontWeight: "body" }}
-              my={2}
-            >
+          <Box mt={3}>
+            <Heading as={titleAs} sx={{ textAlign: "center", fontSize: 1 }}>
               {artist.name}
             </Heading>
           </Box>

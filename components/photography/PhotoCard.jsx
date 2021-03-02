@@ -32,18 +32,11 @@ export default function PhotoCard({ photo, titleAs = "h3" }) {
                 alt={photo.place}
               />
             </AspectRatio>
-            <Box my={2}>
-              <Heading
-                as={titleAs}
-                sx={{ textAlign: "center", fontSize: 2, fontWeight: "body" }}
-              >
+            <Box my={2} px={2}>
+              <Heading variant="cardTitle" as={titleAs}>
                 {photo.place}
               </Heading>
-              <Text
-                as="p"
-                variant="subtitle"
-                sx={{ textAlign: "center", fontSize: 1 }}
-              >
+              <Text as="p" variant="subtitle">
                 {[dateformat(new Date(photo.date), "dd mmm yyyy"), photo.camera]
                   .filter((x) => x)
                   .join(" · ")}
