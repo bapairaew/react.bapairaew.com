@@ -1,13 +1,13 @@
 import querystring from "querystring";
 
-const { IMDB_COOKIE: cookie } = process.env;
+const { IMDB_COOKIE: cookie, IMDB_PAGE_ID: pageId } = process.env;
 
 export const getMovies = () => {
   return fetch(
-    `https://www.imdb.com/list/ls089230524/search?${querystring.stringify({
+    `https://www.imdb.com/list/${pageId}/search?${querystring.stringify({
       sort: "date_added,desc",
       view: "detail",
-      pageId: "ls089230524",
+      pageId,
       pageType: "list",
       subpageType: "watchlist",
       tracking_tag: "",

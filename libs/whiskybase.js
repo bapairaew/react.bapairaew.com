@@ -1,10 +1,10 @@
 import csvtojson from "csvtojson";
 
-const { WHISKYBASE_COOKIE: cookie } = process.env;
+const { WHISKYBASE_COOKIE: cookie, WHISKYBASE_ID: id } = process.env;
 
 export const getWhiskies = () => {
   return fetch(
-    `https://www.whiskybase.com/profile/bapairaew/downloadlist/collection/csv`,
+    `https://www.whiskybase.com/profile/${id}/downloadlist/collection/csv`,
     {
       headers: {
         "user-agent":
