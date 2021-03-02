@@ -25,7 +25,7 @@ export const getWhiskies = () => {
             data["ID"][0]
           }/${data["ID"][1]}/${data["ID"].slice(2)}/${data["Photo"]}-big.jpg`,
           href: `https://www.whiskybase.com/whiskies/whisky/${data["ID"]}`,
-          rating: +data["My rating"] / 10,
+          rating: Math.ceil(+data["My rating"] / 20), // Make it 0 - 5 range
           added: data["Added on"].split(" ")[0],
         }))
     );
