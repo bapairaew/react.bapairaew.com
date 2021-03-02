@@ -130,3 +130,17 @@ export const parsePhoto = (photo) => {
     height: photo.exif.ExifImageHeight, // Does not provide correct dimension
   };
 };
+
+export const parseMovie = (movie) =>
+  movie.list.items.map((item) => ({
+    id: item.const,
+    title: movie.titles[item.const].primary.title,
+    href: `https://www.imdb.com/${movie.titles[item.const].primary.href}`,
+    // Request smaller poster image to improve speed
+    poster: movie.titles[item.const].poster.url.replace(
+      "._V1_.",
+      encodeURIComponent("._UX384_CR0,0,384,568_AL_.") // 384 x 568
+    ),
+    rating: movie.starbars[item.const].rating,
+    added: new Date(item.added).toJSON(),
+  }));
