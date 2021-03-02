@@ -15,7 +15,7 @@ import Footer from "~/components/common/Footer";
 import Header from "~/components/common/Header";
 import ArtistCard from "~/components/music/ArtistCard";
 import TrackCard from "~/components/music/TrackCard";
-import { getOgImgeUrlObject } from "~/libs/image";
+import { getOgImgeUrlObject } from "~/libs/ogimage";
 import { getTopArtists, getTopTracks } from "~/libs/spotify";
 
 export const getStaticProps = async () => {

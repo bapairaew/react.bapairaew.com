@@ -4,13 +4,14 @@ import Link from "next/link";
 import { Container, Heading, NavLink as A, Text } from "theme-ui";
 import Footer from "~/components/common/Footer";
 import Header from "~/components/common/Header";
-import { getOgImgeUrlObject } from "~/libs/image";
-import { parsePost } from "~/libs/parser";
+import { parsePost } from "~/libs/mdxDataParser";
+import { getOgImgeUrlObject } from "~/libs/ogimage";
 
 export default function PostLayout({ children, frontMatter }) {
   const post =
     frontMatter &&
     parsePost({ data: frontMatter, path: frontMatter.__resourcePath });
+
   return (
     <>
       <Header />

@@ -3,8 +3,9 @@ import AboutFeatured from "~/components/about/AboutFeatured";
 import AboutHero from "~/components/about/AboutHero";
 import Footer from "~/components/common/Footer";
 import Header from "~/components/common/Header";
-import { getAllPhotos, getAllPosts, getAllProjects } from "~/libs/data";
-import { getOgImgeUrlObject } from "~/libs/image";
+import { getAllPosts, getAllProjects } from "~/libs/mdx";
+import { getOgImgeUrlObject } from "~/libs/ogimage";
+import { getAllPhotos } from "~/libs/photo";
 
 export const getStaticProps = async () => {
   const projects = await getAllProjects();

@@ -3,8 +3,8 @@ import { Box, Container, Divider, Grid, Heading } from "theme-ui";
 import Footer from "~/components/common/Footer";
 import Header from "~/components/common/Header";
 import PostCard from "~/components/posts/PostCard";
-import { getAllPosts } from "~/libs/data";
-import { getOgImgeUrlObject } from "~/libs/image";
+import { getAllPosts } from "~/libs/mdx";
+import { getOgImgeUrlObject } from "~/libs/ogimage";
 
 export const getStaticProps = async () => {
   const posts = await getAllPosts();

@@ -18,9 +18,8 @@ import {
 import { promisify } from "util";
 import Footer from "~/components/common/Footer";
 import Header from "~/components/common/Header";
-import { getAllPhotos } from "~/libs/data";
-import { getPhotoUrlObject } from "~/libs/image";
-import { parsePhoto } from "~/libs/parser";
+import { getPhotoUrlObject } from "~/libs/ogimage";
+import { getAllPhotos, parsePhoto } from "~/libs/photo";
 
 export const getStaticPaths = async () => {
   const photos = await getAllPhotos();

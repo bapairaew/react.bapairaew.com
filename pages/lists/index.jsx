@@ -12,7 +12,7 @@ import {
 } from "theme-ui";
 import Footer from "~/components/common/Footer";
 import Header from "~/components/common/Header";
-import { getOgImgeUrlObject } from "~/libs/image";
+import { getOgImgeUrlObject } from "~/libs/ogimage";
 
 const lists = [
   { title: "Music", href: "/lists/music" },
@@ -24,10 +24,11 @@ export default function Lists() {
     <>
       <NextSeo
         title="Lists | Narudom"
-        description="Lists of random things that I enjoy."
+        description="Lists of random things that an software engineer enjoy."
         openGraph={{
           title: "Lists | Narudom",
-          description: "Lists of things that I enjoy.",
+          description:
+            "Lists of random things that an software engineer enjoy.",
           images: getOgImgeUrlObject("Lists"),
           site_name: "Narudom",
         }}

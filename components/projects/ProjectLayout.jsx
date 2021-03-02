@@ -1,10 +1,10 @@
 import { NextSeo } from "next-seo";
 import Link from "next/link";
-import { Container, Heading, Text, NavLink as A } from "theme-ui";
+import { Container, Heading, NavLink as A, Text } from "theme-ui";
 import Footer from "~/components/common/Footer";
 import Header from "~/components/common/Header";
-import { getOgImgeUrlObject } from "~/libs/image";
-import { parseProject } from "~/libs/parser";
+import { parseProject } from "~/libs/mdxDataParser";
+import { getOgImgeUrlObject } from "~/libs/ogimage";
 
 export default function ProjectLayout({ children, frontMatter }) {
   const project =

@@ -14,7 +14,7 @@ import {
 import Footer from "~/components/common/Footer";
 import Header from "~/components/common/Header";
 import MoiveCard from "~/components/movies/MovieCard";
-import { getOgImgeUrlObject } from "~/libs/image";
+import { getOgImgeUrlObject } from "~/libs/ogimage";
 import { getMovies } from "~/libs/imdb";
 
 export const getStaticProps = async () => {
