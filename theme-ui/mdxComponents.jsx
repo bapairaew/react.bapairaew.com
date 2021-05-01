@@ -1,7 +1,7 @@
 import Prism from "@theme-ui/prism";
 import Image from "next/image";
 import Link from "next/link";
-import { AspectRatio, Grid, Link as A, Text } from "theme-ui";
+import { AspectRatio, Box, Grid, Link as A, Text } from "theme-ui";
 
 // https://github.com/leerob/leerob.io/blob/main/components/MDXComponents.js
 const MdxLink = ({ children, ...props }) => {
@@ -25,7 +25,7 @@ const MdxLink = ({ children, ...props }) => {
 
 const MdxImage = ({ src, alt }) => {
   return (
-    <>
+    <Box mb={2}>
       <AspectRatio
         ratio={4 / 3}
         my={2}
@@ -40,7 +40,7 @@ const MdxImage = ({ src, alt }) => {
       <Text variant="subtitle" sx={{ textAlign: "center" }}>
         {alt}
       </Text>
-    </>
+    </Box>
   );
 };
 

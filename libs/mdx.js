@@ -23,6 +23,8 @@ export const getAllProjects = async () => {
 };
 
 export const getAllPosts = async () => {
-  const posts = (await getMdxData("pages/posts/*.mdx")).map(parsePost);
+  const posts = (await getMdxData("pages/posts/*.mdx"))
+    .map(parsePost)
+    .filter((x) => x.publishedTime);
   return posts;
 };
